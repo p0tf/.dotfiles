@@ -9,3 +9,15 @@ $ cd ~/.dotfiles
 $ git pull
 $ yes | ./install.sh
 ```
+## Dependencies
+- Common
+    - Needed
+        - `git`
+- `.config/nvim`
+    - Needed
+        - `nvim`
+        - `python-nvim`
+    - Optional
+        - `python-jedi`
+        - `rust`
+        - `rust-racer`
