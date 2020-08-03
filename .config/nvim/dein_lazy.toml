@@ -9,6 +9,7 @@ on_ft = ['fish']
 [[plugins]]
 repo = 'deoplete-plugins/deoplete-jedi'
 on_ft = ['python']
+depends = ['deoplete.nvim']
 hook_add = 'runtime dein/deoplete-jedi.vim'
 
 [[plugins]]
