@@ -36,6 +36,11 @@ _main() {
     cd $HOME/.dotfiles/
 
     for f in `cat file_list`;do
+
+        if [ ! -d `dirname $f` ];then
+            mkdir -p `dirname $f`
+        fi
+
         if [ -e $HOME/$f ] && ! _yes_no "[WARN] File $HOME/$f exists. Overwrite?" n ;then
             echo [WARN] File $f is ignored.
         else
