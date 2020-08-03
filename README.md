@@ -33,3 +33,6 @@ $ yes | ./install.sh
     - Optional
         - `rofi`
         - `plasma-desktop`
+- `.config/rofi`
+    - Needed
+        - `rofi`

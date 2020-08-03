@@ -2,3 +2,4 @@
 .config/alacritty.yml
 .config/fish
 .config/i3
+.config/rofi
