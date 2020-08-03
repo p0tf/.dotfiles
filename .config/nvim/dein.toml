@@ -22,6 +22,10 @@ repo = 'Shougo/deoplete.nvim'
 hook_add = 'runtime dein/deoplete.vim'
 
 [[plugins]]
+repo = 'Shougo/neco-syntax'
+depends = ['deoplete.nvim']
+
+[[plugins]]
 repo = 'tpope/vim-commentary'
 
 [[plugins]]
