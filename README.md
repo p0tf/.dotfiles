@@ -13,6 +13,7 @@ $ yes | ./install.sh
 - Common
     - Needed
         - `git`
+        - `which`
 - `.config/nvim`
     - Needed
         - `nvim`
