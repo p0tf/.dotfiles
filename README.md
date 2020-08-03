@@ -27,3 +27,9 @@ $ yes | ./install.sh
 - `.config/fish`
     - Needed
         - `fish`
+- `.config/i3`
+    - Needed
+        - `i3` or `i3-gaps` or `sway`
+    - Optional
+        - `rofi`
+        - `plasma-desktop`
