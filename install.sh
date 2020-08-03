@@ -37,8 +37,8 @@ _main() {
 
     for f in `cat file_list`;do
 
-        if [ ! -d `dirname $f` ];then
-            mkdir -p `dirname $f`
+        if [ ! -d `dirname $HOME/$f` ];then
+            mkdir -p `dirname $HOME/$f`
         fi
 
         if [ -e $HOME/$f ] && ! _yes_no "[WARN] File $HOME/$f exists. Overwrite?" n ;then
