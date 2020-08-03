@@ -35,20 +35,12 @@ _main() {
 
     cd $HOME/.dotfiles/
 
-    # Ignore denylist
-    for f in `find | cut -c3- | grep -Pv '^($|.git|init|README.md|LICENSE|install.sh)'`;do
-
-        if [ -d $f ] && [ ! -e $HOME/$f ];then
-            mkdir $HOME/$f
-        elif [ -f $f ];then
-            if [ ! -e $HOME/$f ];then
-                ln -s $HOME/.dotfiles/$f $HOME/$f
-                echo [INFO] File \"$HOME/$f\" is successfully linked.
-            elif _yes_no "[WARN] File $HOME/$f exists. Overwrite?" n ;then
-                rm $HOME/$f
-                ln -s $HOME/.dotfiles/$f $HOME/$f
-                echo [INFO] $f is successfully linked.
-            fi
+    for f in `cat file_list`;do
+        if [ -e $HOME/$f ] && ! _yes_no "[WARN] File $HOME/$f exists. Overwrite?" n ;then
+            echo [WARN] File $f is ignored.
+        else
+            ln -s $HOME/.dotfiles/$f $HOME/$f
+            echo [INFO] $f is successfully linked.
         fi
     done
 
