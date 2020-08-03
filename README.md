@@ -16,7 +16,7 @@ $ yes | ./install.sh
 - `.config/nvim`
     - Needed
         - `nvim`
-        - `python-nvim`
+        - `python-pynvim`
     - Optional
         - `python-jedi`
         - `rust`
