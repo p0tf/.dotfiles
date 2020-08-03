@@ -15,3 +15,7 @@ hook_add = 'runtime dein/deoplete-jedi.vim'
 repo = 'racer-rust/vim-racer'
 on_ft = ['rust']
 hook_add = 'runtime dein/racer.vim'
+
+[[plugins]]
+repo = 'vim-crystal/vim-crystal'
+on_ft = ['crystal']

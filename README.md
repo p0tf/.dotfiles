@@ -22,6 +22,7 @@ $ yes | ./install.sh
         - `python-jedi`
         - `rust`
         - `rust-racer`
+        - `crystal`
 - `.config/alacritty.yml`
     - Needed
         - `alacritty`
