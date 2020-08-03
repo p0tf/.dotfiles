@@ -26,7 +26,7 @@ _main() {
     if [ ! -d $HOME/.dotfiles ];then
         cd $HOME
         echo [INFO] Main directory is missing. Now retrieving.
-        if which git; then
+        if ! which git; then
             echo "[ERROR] \"git\" is missing. Please install."
             return 1
         fi
@@ -42,8 +42,8 @@ _main() {
             mkdir $HOME/$f
         elif [ -f $f ];then
             if [ ! -e $HOME/$f ];then
-                ln -s $f $HOME/$f
-                echo [INFO] File \"$f\" is successfully linked.
+                ln -s $HOME/.dotfiles/$f $HOME/$f
+                echo [INFO] File \"$HOME/$f\" is successfully linked.
             elif _yes_no "[WARN] File $HOME/$f exists. Overwrite?" n ;then
                 rm $HOME/$f
                 ln -s $HOME/.dotfiles/$f $HOME/$f
@@ -54,7 +54,7 @@ _main() {
 
     for f in `ls -1 init/`;do
         if [ -x init/$f ] && _yes_no "[INFO] Do you want to run init/$f?" y ;then
-            $f
+            init/$f
         fi
     done
 
