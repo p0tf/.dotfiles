@@ -24,3 +24,6 @@ $ yes | ./install.sh
 - `.config/alacritty.yml`
     - Needed
         - `alacritty`
+- `.config/fish`
+    - Needed
+        - `fish`
