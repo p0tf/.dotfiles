@@ -17,7 +17,7 @@ function fish_prompt --description 'Write out the prompt'
 
     set_color -o magenta
     if [ -f ~/.machine ]
-        printf '%s%s%s ' '[' (cat .machine) ']'
+        printf '%s%s%s ' '[' (cat ~/.machine) ']'
     end
     set_color -o blue
     printf '%s' (prompt_pwd)
