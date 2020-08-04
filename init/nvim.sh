@@ -16,7 +16,7 @@ _main() {
     git clone https://github.com/Shougo/dein.vim.git
 
     cd $cur_dir
-    nvim --headless +"call dein#install()" +q
+    nvim --headless +"call dein#install()" +UpdateRemotePlugins +q
     echo
 }
 
