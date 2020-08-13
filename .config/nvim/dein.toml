@@ -5,6 +5,9 @@ repo = 'Shougo/dein.vim'
 repo = 'joshdick/onedark.vim'
 
 [[plugins]]
+repo = "editorconfig/editorconfig-vim"
+
+[[plugins]]
 repo = 'itchyny/lightline.vim'
 hook_add = 'runtime dein/lightline.vim'
 
