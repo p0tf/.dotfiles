@@ -32,4 +32,7 @@ depends = ['deoplete.nvim']
 repo = 'tpope/vim-commentary'
 
 [[plugins]]
+repo = 'vim-scripts/vim-auto-save'
+
+[[plugins]]
 repo = 'plasticboy/vim-markdown'
