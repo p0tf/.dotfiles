@@ -1,6 +1,8 @@
 font:
     size: 7.5
 
+background_opacity: 0.95
+
 # Colors (One Dark)
 colors:
   # Default colors
