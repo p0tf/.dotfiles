@@ -1,8 +1,9 @@
-nnoremap <silent> aj :ALENext<CR>
-nnoremap <silent> ak :ALEPrevious<CR>
-nnoremap <silent> a0 :ALEFirst<CR>
-nnoremap <silent> a$ :ALELast<CR>
-nnoremap <silent> af :ALEFix<CR>
+nnoremap <silent> ,n :ALENext<CR>
+nnoremap <silent> ,p :ALEPrevious<CR>
+nnoremap <silent> ,0 :ALEFirst<CR>
+nnoremap <silent> ,; :ALELast<CR>
+nnoremap <silent> ,f :ALEFix<CR>
+nnoremap <silent> ,d :ALEDetail<CR>
 
 let g:ale_fixers = {
 \   'rust': ['rustfmt']
