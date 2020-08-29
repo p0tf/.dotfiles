@@ -3,7 +3,7 @@
 set -e
 
 _yes_no() {
-    echo -n "$1 "
+    echo -en "$1 "
     if [ x$2 = "xn" ];then
         read -p "[y/N]: " ans
         case $ans in
@@ -25,9 +25,9 @@ _main() {
     # If environment is not initialized yet, intialize now.
     if [ ! -d $HOME/.dotfiles ];then
         cd $HOME
-        echo [INFO] Main directory is missing. Now retrieving.
+        echo -e "\e[32m[INFO]\e[m Main directory is missing. Now retrieving."
         if ! which git; then
-            echo "[ERROR] \"git\" is missing. Please install."
+            echo -e "\e[31m[ERROR]\e[m \"git\" is missing. Please install."
             return 1
         fi
         git clone https://github.com/watcol/.dotfiles.git
@@ -41,22 +41,22 @@ _main() {
             mkdir -p `dirname $HOME/$f`
         fi
 
-        if [ -e $HOME/$f ] && ! _yes_no "[WARN] File $HOME/$f exists. Overwrite?" n ;then
-            echo [WARN] File $f is ignored.
+        if [ -e $HOME/$f ] && ! _yes_no "\e[33m[WARN]\e[m File $HOME/$f exists. Overwrite?" n ;then
+            echo -e "\e[33m[WARN]\e[m File $f is ignored."
         else
             ln -s $HOME/.dotfiles/$f $HOME/$f
-            echo [INFO] $f is successfully linked.
+            echo -e "\e[32m[INFO]\e[m $f is successfully linked."
         fi
     done
 
     for f in `ls -1 init/`;do
-        if [ -x init/$f ] && _yes_no "[INFO] Do you want to run init/$f?" y ;then
+        if [ -x init/$f ] && _yes_no "\e[32m[INFO]\e[m Do you want to run init/$f?" y ;then
             init/$f
         fi
     done
 
     cd $cur_dir
-    echo [INFO] All done!
+    echo -e "\e[32m[INFO]\e[m All done!"
 }
 
 _main
