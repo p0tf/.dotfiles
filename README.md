@@ -23,6 +23,7 @@ $ yes | ./install.sh
         - `rust`
         - `rust-racer`
         - `crystal`
+        - `xclip` or `xsel`
 - `.config/alacritty.yml`
     - Needed
         - `alacritty`

@@ -27,6 +27,12 @@ set smartcase
 set hlsearch
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
+" Clipboard support
+if has('clipboard')
+    set clipboard+=unnamedplus
+endif
+
+
 " force exit on ^C
 nnoremap <silent><C-c> :<C-u>qa!<CR>
 
@@ -63,6 +69,7 @@ for n in range(1, 9)
     execute 'nnoremap <silent> <Space>m-'.n ':<C-u>tabmove-'.n.'<CR>'
 endfor
 
+" Windows
 nnoremap <silent> <Space>s :<C-u>new<CR>
 nnoremap <silent> <Space>S :<C-u>split<CR>
 nnoremap <silent> <Space>v :<C-u>vnew<CR>
