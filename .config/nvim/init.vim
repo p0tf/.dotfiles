@@ -32,6 +32,8 @@ if has('clipboard')
     set clipboard+=unnamedplus
 endif
 
+" jk = <Esc>
+inoremap jk <Esc>
 
 " force exit on ^C
 nnoremap <silent><C-c> :<C-u>qa!<CR>
