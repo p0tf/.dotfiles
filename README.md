@@ -30,3 +30,6 @@ $ yes | ./install.sh
 - `.config/fish`
     - Needed
         - `fish`
+- `.editorconfig`
+    - Needed
+        - `editorconfig-vim`
