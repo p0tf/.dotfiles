@@ -27,6 +27,10 @@ set smartcase
 set hlsearch
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
+" Visualize tab and trail.
+set list
+set listchars=tab:\|-,trail:.
+
 " Clipboard support
 if has('clipboard')
     set clipboard+=unnamedplus
