@@ -1,1 +1,1 @@
-let g:racer_cmd = "/usr/bin/racer"
+let g:racer_cmd = "~/.cargo/bin/racer"
