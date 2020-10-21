@@ -5,5 +5,5 @@ function fish_right_prompt
     echo "$err "
     set_color normal
 end
-  fish_mode_prompt_right
+  fish_right_mode_prompt
 end

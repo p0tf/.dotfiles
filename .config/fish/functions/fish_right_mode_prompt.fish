@@ -1,4 +1,4 @@
-function fish_mode_prompt_right
+function fish_right_mode_prompt
   if test "$fish_key_bindings" = "fish_vi_key_bindings"
     switch $fish_bind_mode
       case default
@@ -15,6 +15,5 @@ function fish_mode_prompt_right
         echo [VIS]
     end
     set_color normal
-    printf " "
   end
 end
