@@ -27,6 +27,9 @@ set smartcase
 set hlsearch
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
+" Customize auto-complete.
+set completeopt=menuone,noinsert
+
 " Visualize tab and trail.
 set list
 set listchars=tab:\|-,trail:.
