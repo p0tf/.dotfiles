@@ -42,6 +42,12 @@ endif
 " jk = <Esc>
 inoremap jk <Esc>
 
+" Disable arrow keys
+nnoremap <Left> <Nop>
+nnoremap <Right> <Nop>
+nnoremap <Up> <Nop>
+nnoremap <Down> <Nop>
+
 " force exit on ^C
 nnoremap <silent><C-c> :<C-u>qa!<CR>
 
