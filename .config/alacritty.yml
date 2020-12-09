@@ -5,6 +5,12 @@ font:
   size: 7.5
 background_opacity: 0.95
 
+shell:
+  program: sh
+  args:
+    - -c
+    - ~/.alacritty_startup.sh
+
 # Colors (Nord)
 colors:
    # Default colors
