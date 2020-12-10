@@ -12,6 +12,12 @@ repo = 'itchyny/lightline.vim'
 hook_add = 'runtime dein/lightline.vim'
 
 [[plugins]]
+repo = 'preservim/nerdtree'
+
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+[[plugins]]
 repo = 'dense-analysis/ale'
 hook_add = 'runtime dein/ale.vim'
 

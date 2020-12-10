@@ -41,10 +41,11 @@ endif
 
 " jk = <Esc>
 inoremap jk <Esc>
-tnoremap jk <C-\><C-n>
+tnoremap <A-c> <C-\><C-n>
 
 " open the terminal
 nnoremap <silent><A-t> :<C-u>terminal<CR>
+nnoremap <silent><A-e> :<C-u>NERDTreeToggle<CR>
 
 " Disable arrow keys
 nnoremap <Left> <Nop>
