@@ -1,13 +1,14 @@
 let g:lightline = {
 \   'colorscheme': 'onedark',
 \   'active': {
-\       'left': [['mode'], ['filename', 'modified']],
+\       'left': [['mode'], ['git', 'filename', 'modified']],
 \       'right': [['lineinfo'], ['filetype'], ['ale-checking', 'ale-errors', 'ale-warnings', 'ale-ok']]
 \   },
 \   'component': {
 \       'lineinfo': '%l:%c(%p%%)'
 \   },
 \   'component_function': {
+\       'git': "FugitiveHead",
 \       'mode': 'Mode',
 \       'modified': 'Modified'
 \   }
