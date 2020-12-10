@@ -1,0 +1,11 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=Fish
+GenericName=Shell
+Comment=The fish shell
+Type=Application
+TryExec=fish
+Exec=fish
+Terminal=true
+Icon=alacritty
+StartupNotify=false

@@ -2,3 +2,4 @@
 .config/alacritty.yml
 .config/fish
 .editorconfig
+.local/share/applications/fish.desktop
