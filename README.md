@@ -1,7 +1,7 @@
 # My dotfiles
 ## Install
 ```shell
-$ curl -L git.io/watc_df | sh
+$ curl -L git.io/JIoEk | sh
 ```
 ## Update
 ```shell
