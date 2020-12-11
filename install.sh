@@ -30,7 +30,7 @@ _main() {
             echo -e "\e[31m[ERROR]\e[m \"git\" is missing. Please install."
             return 1
         fi
-        git clone https://github.com/watcol/.dotfiles.git
+        git clone https://github.com/p0tf/.dotfiles.git
     fi
 
     cd $HOME/.dotfiles/
