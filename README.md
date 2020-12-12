@@ -1,7 +1,7 @@
 # My dotfiles
 ## Install
 ```shell
-$ curl -L git.io/JIoEk | sh
+$ curl -L git.io/dot-pm | sh
 ```
 ## Update
 ```shell
