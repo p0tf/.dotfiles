@@ -9,15 +9,15 @@ hook_add = 'runtime dein/onedark.vim'
 repo = "editorconfig/editorconfig-vim"
 
 [[plugins]]
-repo = 'itchyny/lightline.vim'
-hook_add = 'runtime dein/lightline.vim'
-
-[[plugins]]
 repo = 'preservim/nerdtree'
 hook_add = 'runtime dein/nerdtree.vim'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+hook_add = 'runtime dein/lightline.vim'
 
 [[plugins]]
 repo = 'dense-analysis/ale'
@@ -41,4 +41,3 @@ repo = 'tpope/vim-commentary'
 
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
-

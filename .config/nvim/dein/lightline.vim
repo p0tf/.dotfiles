@@ -15,36 +15,36 @@ let g:lightline = {
 \ }
 
 function! Mode()
-    let i = mode()
-    if i =~ 'i'
-        let m = 'INS'
-    elseif i =~ 'c'
-        let m = 'CMD'
-    elseif i =~ 'n'
-        let m = 'NOR'
-    elseif i =~ 'R'
-        let m = 'REP'
-    else
-        let m = 'VIS'
-    endif
+  let i = mode()
+  if i =~ 'i'
+    let m = 'INS'
+  elseif i =~ 'c'
+    let m = 'CMD'
+  elseif i =~ 'n'
+    let m = 'NOR'
+  elseif i =~ 'R'
+    let m = 'REP'
+  else
+    let m = 'VIS'
+  endif
 
-    if &paste
-        let p = '(PAS)'
-    else
-        let p = ''
-    endif
+  if &paste
+    let p = '(PAS)'
+  else
+    let p = ''
+  endif
 
-    return m . p
+  return m . p
 endfunction
 
 function! Modified()
-    if &readonly && &modified
-        return '!'
-    elseif &readonly
-        return '-'
-    elseif &modified
-        return '+'
-    endif
+  if &readonly && &modified
+    return '!'
+  elseif &readonly
+    return '-'
+  elseif &modified
+    return '+'
+  endif
 
-    return ''
+  return ''
 endfunction
