@@ -39,3 +39,4 @@ repo = 'tpope/vim-commentary'
 
 [[plugins]]
 repo = 'plasticboy/vim-markdown'
+

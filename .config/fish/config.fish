@@ -20,4 +20,7 @@ set __fish_git_prompt_char_stashstate '↩'
 set __fish_git_prompt_char_upstream_ahead '+'
 set __fish_git_prompt_char_upstream_behind '-'
 
+set fish_user_paths ~/.gem/ruby/2.7.0/bin $fish_user_paths
+set fish_user_paths ~/.cargo/bin $fish_user_paths
+
 fish_vi_key_bindings

@@ -20,3 +20,7 @@ hook_add = 'runtime dein/racer.vim'
 [[plugins]]
 repo = 'vim-crystal/vim-crystal'
 on_ft = ['crystal']
+
+[[plugins]]
+repo = 'tokorom/vim-review'
+on_ft = ['review']
