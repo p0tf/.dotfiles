@@ -1,11 +1,9 @@
 #!/usr/bin/env xdg-open
 [Desktop Entry]
-Name=Fish
-GenericName=Shell
-Comment=The fish shell
+Name=Neovim
+GenericName=Text Editor
 Type=Application
-TryExec=fish
-Exec=fish
+Exec=sh -c ~/.nvim_startup
 Terminal=true
-Icon=alacritty
+Icon=nvim
 StartupNotify=false

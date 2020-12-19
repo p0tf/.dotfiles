@@ -18,6 +18,14 @@ _main() {
     cd $cur_dir
     nvim --headless +"call dein#install()" +UpdateRemotePlugins +q
     echo
+
 }
 
 _main
+
+cat << EOF > ~/.nvim_startup
+#!/bin/sh
+sleep 0.1
+nvim
+EOF
+chmod +x ~/.nvim_startup
