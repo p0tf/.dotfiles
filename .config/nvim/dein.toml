@@ -3,6 +3,7 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'joshdick/onedark.vim'
+hook_add = 'runtime dein/onedark.vim'
 
 [[plugins]]
 repo = "editorconfig/editorconfig-vim"
@@ -13,6 +14,7 @@ hook_add = 'runtime dein/lightline.vim'
 
 [[plugins]]
 repo = 'preservim/nerdtree'
+hook_add = 'runtime dein/nerdtree.vim'
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
