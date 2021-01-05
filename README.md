@@ -1,7 +1,7 @@
 # My dotfiles
 ## Install
 ```shell
-$ curl -L git.io/dot-pm | sh
+$ curl -L git.io/watc_df | sh
 ```
 ## Update
 ```shell
