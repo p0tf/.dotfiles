@@ -38,6 +38,3 @@ depends = ['deoplete.nvim']
 
 [[plugins]]
 repo = 'tpope/vim-commentary'
-
-[[plugins]]
-repo = 'plasticboy/vim-markdown'

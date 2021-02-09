@@ -3,10 +3,6 @@ repo = 'cespare/vim-toml'
 on_ft = ['toml']
 
 [[plugins]]
-repo = 'dag/vim-fish'
-on_ft = ['fish']
-
-[[plugins]]
 repo = 'deoplete-plugins/deoplete-jedi'
 on_ft = ['python']
 depends = ['deoplete.nvim']
@@ -16,10 +12,6 @@ hook_add = 'runtime dein/deoplete-jedi.vim'
 repo = 'racer-rust/vim-racer'
 on_ft = ['rust']
 hook_add = 'runtime dein/racer.vim'
-
-[[plugins]]
-repo = 'vim-crystal/vim-crystal'
-on_ft = ['crystal']
 
 [[plugins]]
 repo = 'tokorom/vim-review'
