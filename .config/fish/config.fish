@@ -4,6 +4,12 @@ set fish_greeting
 # Set default editor to nvim
 set -Ux EDITOR nvim
 
+# Set cursor mode
+set fish_cursor_default block
+set fish_cursor_insert line
+set fish_cursor_replace_one underscore
+set fish_cursor_visual block
+
 # Fish git prompt
 set __fish_git_prompt_showdirtystate 'yes'
 set __fish_git_prompt_showstashstate 'yes'
