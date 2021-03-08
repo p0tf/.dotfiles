@@ -9,8 +9,12 @@ hook_add = 'runtime dein/onedark.vim'
 repo = "editorconfig/editorconfig-vim"
 
 [[plugins]]
-repo = 'preservim/nerdtree'
-hook_add = 'runtime dein/nerdtree.vim'
+repo = 'lambdalisue/fern.vim'
+hook_add = 'runtime dein/fern.vim'
+
+[[plugins]]
+repo = 'lambdalisue/fern-hijack.vim'
+depends = [ 'fern.vim' ]
 
 [[plugins]]
 repo = 'tpope/vim-fugitive'
