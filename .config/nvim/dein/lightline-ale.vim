@@ -1,3 +1,8 @@
+let g:lightline#ale#indicator_checking = ' Checking...'
+let g:lightline#ale#indicator_warnings = ' '
+let g:lightline#ale#indicator_errors = ' '
+let g:lightline#ale#indicator_ok = ' OK'
+
 let g:lightline.component_expand = {
 \   'ale-checking': 'lightline#ale#checking',
 \   'ale-errors': 'lightline#ale#errors',
