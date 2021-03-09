@@ -32,17 +32,8 @@ hook_add = 'runtime dein/gitgutter.vim'
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
-depends = [ 'nerdfont.vim', 'ale', 'gina.vim', 'vim-gitgutter' ]
+depends = [ 'nerdfont.vim', 'gina.vim', 'vim-gitgutter' ]
 hook_add = 'runtime dein/lightline.vim'
-
-[[plugins]]
-repo = 'dense-analysis/ale'
-hook_add = 'runtime dein/ale.vim'
-
-[[plugins]]
-repo = 'maximbaz/lightline-ale'
-depends = [ 'lightline.vim', 'ale' ]
-hook_add = 'runtime dein/lightline-ale.vim'
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'

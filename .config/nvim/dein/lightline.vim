@@ -2,7 +2,7 @@ let g:lightline = {
 \   'colorscheme': 'onedark',
 \   'active': {
 \       'left': [['mode'], ['filename', 'modified']],
-\       'right': [['lineinfo'], ['git'], ['ale-checking', 'ale-errors', 'ale-warnings', 'ale-ok']]
+\       'right': [['lineinfo'], ['git']]
 \   },
 \   'component': {
 \       'lineinfo': '%l:%c(%p%%)'
