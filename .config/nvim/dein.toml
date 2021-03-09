@@ -24,6 +24,9 @@ repo = 'lambdalisue/fern-renderer-nerdfont.vim'
 hook_add = "runtime dein/fern-nerdfont.vim"
 
 [[plugins]]
+repo = 'lambdalisue/fern-git-status.vim'
+
+[[plugins]]
 repo = 'lambdalisue/gina.vim'
 
 [[plugins]]
