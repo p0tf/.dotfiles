@@ -23,8 +23,12 @@ depends = [ 'fern.vim' ]
 repo = 'lambdalisue/gina.vim'
 
 [[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = 'runtime dein/gitgutter.vim'
+
+[[plugins]]
 repo = 'itchyny/lightline.vim'
-depends = [ 'nerdfont.vim' ]
+depends = [ 'nerdfont.vim', 'ale', 'gina.vim', 'vim-gitgutter' ]
 hook_add = 'runtime dein/lightline.vim'
 
 [[plugins]]

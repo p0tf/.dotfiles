@@ -17,13 +17,13 @@ let g:lightline = {
 
 function! Mode()
   let i = mode()
-  if i =~ 'i'
+  if i == 'i'
     let m = 'INS'
-  elseif i =~ 'c'
+  elseif i == 'c'
     let m = 'CMD'
-  elseif i =~ 'n'
+  elseif i == 'n'
     let m = 'NOR'
-  elseif i =~ 'R'
+  elseif i == 'R'
     let m = 'REP'
   else
     let m = 'VIS'
@@ -41,7 +41,7 @@ endfunction
 function! FileName()
   let icon = nerdfont#find()
   let name = expand('%:t')
-  if len(name) =~ 0
+  if len(name) == 0
     return '[No Name]'
   else
     return icon . ' ' . name
@@ -61,10 +61,36 @@ function! Modified()
 endfunction
 
 function! Git()
+  let symbol = ' '
   let branch = gina#component#repo#branch()
-  if len(branch) =~ 0
-    return ' [None]'
+  if len(branch) == 0
+    return symbol . '[None]'
+  endif
+
+  if ! exists('*GitGutterGetHunkSummary') ||
+\    ! get(g:, 'gitgutter_enabled', 0) ||
+\    winwidth('.') <= 90
+    return symbol . branch
+  endif
+
+  let signs = [
+\   g:gitgutter_sign_added,
+\   g:gitgutter_sign_modified,
+\   g:gitgutter_sign_removed
+\ ]
+  let hunks = GitGutterGetHunkSummary()
+  let gitgutter = []
+  for i in [0, 1, 2]
+    if hunks[i] > 0
+      call add(gitgutter, signs[i] . hunks[i])
+    endif
+  endfor
+
+  let gitgutter = join(gitgutter, ' ')
+
+  if len(gitgutter) == 0
+    return symbol . branch
   else
-    return ' ' . gina#component#repo#branch()
+    return symbol . branch . ' (' . gitgutter . ')'
   endif
 endfunction
