@@ -20,6 +20,10 @@ repo = 'lambdalisue/fern-hijack.vim'
 depends = [ 'fern.vim' ]
 
 [[plugins]]
+repo = 'lambdalisue/fern-renderer-nerdfont.vim'
+hook_add = "runtime dein/fern-nerdfont.vim"
+
+[[plugins]]
 repo = 'lambdalisue/gina.vim'
 
 [[plugins]]
