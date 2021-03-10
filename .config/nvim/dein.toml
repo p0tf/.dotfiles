@@ -55,7 +55,7 @@ depends = ['deoplete.nvim']
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
-depends = [ 'nerdfont.vim', 'gina.vim', 'vim-gitgutter' ]
+depends = [ 'nerdfont.vim', 'gina.vim', 'vim-gitgutter', 'vim-lsp' ]
 hook_add = 'runtime dein/lightline.vim'
 
 [[plugins]]
