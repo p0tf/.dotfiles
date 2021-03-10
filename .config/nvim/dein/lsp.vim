@@ -10,25 +10,10 @@ let g:lsp_diagnostics_signs_hint = { 'text': ' ' }
 let g:lsp_diagnostics_signs_information = { 'text': ' ' }
 
 " Highlights
-if hlexists('ALEError')
-  highlight link LspErrorHighlight ALEError
-else
-  highlight link LspErrorHighlight SpellBad
-endif
-
-if hlexists('ALEWarning')
-  highlight link LspWarningHighlight ALEWarning
-  highlight link LspHintHighlight ALEWarning
-else
-  highlight link LspWarningHighlight SpellCap
-  highlight link LspHintHighlight SpellCap
-endif
-
-if hlexists('ALEInfo')
-  highlight link LspInformationHighlight ALEInfo
-else
-  highlight link LspInformationHighlight SpellCap
-endif
+highlight link LspErrorHighlight ALEError
+highlight link LspWarningHighlight ALEWarning
+highlight link LspHintHighlight ALEWarning
+highlight link LspInformationHighlight ALEInfo
 
 " Key mappings
 nmap <buffer> <Space>a <Plug>(lsp-code-action)
