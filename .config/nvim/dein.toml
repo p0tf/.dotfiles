@@ -34,17 +34,29 @@ repo = 'airblade/vim-gitgutter'
 hook_add = 'runtime dein/gitgutter.vim'
 
 [[plugins]]
-repo = 'itchyny/lightline.vim'
-depends = [ 'nerdfont.vim', 'gina.vim', 'vim-gitgutter' ]
-hook_add = 'runtime dein/lightline.vim'
+repo = 'prabirshrestha/vim-lsp'
+hook_add = 'runtime dein/lsp.vim'
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+depends = [ 'vim-lsp' ]
 
 [[plugins]]
 repo = 'Shougo/deoplete.nvim'
 hook_add = 'runtime dein/deoplete.vim'
 
 [[plugins]]
+repo = 'lighttiger2505/deoplete-vim-lsp'
+depends = [ 'deoplete.nvim', 'vim-lsp-settings' ]
+
+[[plugins]]
 repo = 'Shougo/neco-syntax'
 depends = ['deoplete.nvim']
+
+[[plugins]]
+repo = 'itchyny/lightline.vim'
+depends = [ 'nerdfont.vim', 'gina.vim', 'vim-gitgutter' ]
+hook_add = 'runtime dein/lightline.vim'
 
 [[plugins]]
 repo = 'tpope/vim-commentary'

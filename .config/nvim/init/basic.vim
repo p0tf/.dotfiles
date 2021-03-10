@@ -1,5 +1,6 @@
 " Appearance
 set number
+set hidden
 set cursorline
 set visualbell
 set list
