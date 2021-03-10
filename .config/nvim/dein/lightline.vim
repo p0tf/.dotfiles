@@ -4,6 +4,14 @@ let g:lightline = {
 \       'left': [['mode'], ['filename', 'modified']],
 \       'right': [['lineinfo'], ['git'], ['lsp-ok', 'lsp-error', 'lsp-warn', 'lsp-hint', 'lsp-info']]
 \   },
+\   'inactive': {
+\       'left': [['filename', 'modified']],
+\       'right': [['lineinfo']]
+\   },
+\   'tab': {
+\     'active': [ 'tabnum', 'filename', 'modified' ],
+\     'inactive': [ 'tabnum', 'filename', 'modified' ]
+\   },
 \   'component': {
 \       'lineinfo': '%l:%c(%p%%)'
 \   },
@@ -26,6 +34,10 @@ let g:lightline = {
 \     'lsp-warn': 'warning',
 \     'lsp-hint': 'warning',
 \     'lsp-info': 'right',
+\   },
+\   'tab_component_function': {
+\     'filename': 'TabFileName',
+\     'modified': 'TabModified',
 \   }
 \ }
 
@@ -67,6 +79,18 @@ function! FileName()
   endif
 endfunction
 
+function! TabFileName(n)
+  let buflist = tabpagebuflist(a:n)
+  let winnr = tabpagewinnr(a:n)
+  let name = expand('#' . buflist[winnr - 1] . ':t')
+  let icon = nerdfont#find(name)
+  if len(name) == 0
+    return '[No Name]'
+  else
+    return icon . ' ' . name
+  endif
+endfunction
+
 function! Modified()
   if &readonly && &modified
     return '!'
@@ -74,6 +98,22 @@ function! Modified()
     return '-'
   elseif &modified
     return '+'
+  endif
+
+  return ''
+endfunction
+
+function! TabModified(n)
+  let winnr = tabpagewinnr(a:n)
+  let modified = gettabwinvar(a:n, winnr, '&modified')
+  let readonly = gettabwinvar(a:n, winnr, '&readonly')
+
+  if readonly && modified
+    return '[!]'
+  elseif readonly
+    return '[-]'
+  elseif modified
+    return '[+]'
   endif
 
   return ''
