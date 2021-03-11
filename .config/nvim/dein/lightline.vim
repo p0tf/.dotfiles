@@ -1,8 +1,10 @@
+nnoremap <Space>U :call<Space>lightline#update()<CR>
+
 let g:lightline = {
 \   'colorscheme': 'onedark',
 \   'active': {
 \       'left': [['mode'], ['filename', 'modified']],
-\       'right': [['lineinfo'], ['git'], ['lsp-ok', 'lsp-error', 'lsp-warn', 'lsp-hint', 'lsp-info']]
+\       'right': [['lineinfo'], ['git'], ['lsp-ok', 'lsp-error', 'lsp-warn', 'lsp-info', 'lsp-hint']]
 \   },
 \   'inactive': {
 \       'left': [['filename', 'modified']],
@@ -21,30 +23,11 @@ let g:lightline = {
 \       'filename': 'FileName',
 \       'modified': 'Modified'
 \   },
-\   'component_expand': {
-\     'lsp-ok': 'LspOk',
-\     'lsp-error': 'LspError',
-\     'lsp-warn': 'LspWarn',
-\     'lsp-hint': 'LspHint',
-\     'lsp-info': 'LspInfo',
-\   },
-\   'component_type': {
-\     'lsp-ok': 'right',
-\     'lsp-error': 'error',
-\     'lsp-warn': 'warning',
-\     'lsp-hint': 'warning',
-\     'lsp-info': 'right',
-\   },
 \   'tab_component_function': {
 \     'filename': 'TabFileName',
 \     'modified': 'TabModified',
 \   }
 \ }
-
-augroup OnLSP
-  autocmd!
-  autocmd User lsp_diagnostics_updated call lightline#update()
-augroup END
 
 function! Mode()
   let i = mode()
@@ -152,74 +135,4 @@ function! Git()
   else
     return symbol . branch . ' (' . gitgutter . ')'
   endif
-endfunction
-
-function! LspOk()
-  if lsp#get_server_status() == ''
-    return ''
-  endif
-
-  let counts =  lsp#get_buffer_diagnostics_counts()
-  let total = counts.error + counts.warning + counts.information + counts.hint
-  if total == 0
-    return ' OK'
-  else
-    return ''
-  endif
-endfunction
-
-function! LspError()
-  if lsp#get_server_status() == ''
-    return ''
-  endif
-
-  let count = lsp#get_buffer_diagnostics_counts().error
-  let sign = g:lsp_diagnostics_signs_error.text
-  if count == 0
-    return ''
-  else
-    return sign . count
-  end
-endfunction
-
-function! LspWarn()
-  if lsp#get_server_status() == ''
-    return ''
-  endif
-
-  let count = lsp#get_buffer_diagnostics_counts().warning
-  let sign = g:lsp_diagnostics_signs_warning.text
-  if count == 0
-    return ''
-  else
-    return sign . count
-  end
-endfunction
-
-function! LspHint()
-  if lsp#get_server_status() == ''
-    return ''
-  endif
-
-  let count = lsp#get_buffer_diagnostics_counts().hint
-  let sign = g:lsp_diagnostics_signs_hint.text
-  if count == 0
-    return ''
-  else
-    return sign . count
-  end
-endfunction
-
-function! LspInfo()
-  if lsp#get_server_status() == ''
-    return ''
-  endif
-
-  let count = lsp#get_buffer_diagnostics_counts().information
-  let sign = g:lsp_diagnostics_signs_information.text
-  if count == 0
-    return ''
-  else
-    return sign . count
-  end
 endfunction

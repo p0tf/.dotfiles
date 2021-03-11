@@ -59,4 +59,9 @@ depends = [ 'nerdfont.vim', 'gina.vim', 'vim-gitgutter', 'vim-lsp' ]
 hook_add = 'runtime dein/lightline.vim'
 
 [[plugins]]
+repo = 'watcol/lightline-lsp'
+depends = [ 'lightline.vim', 'vim-lsp' ]
+hook_add = 'runtime dein/lightline-lsp.vim'
+
+[[plugins]]
 repo = 'tpope/vim-commentary'
