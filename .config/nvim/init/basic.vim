@@ -1,6 +1,5 @@
 " Appearance
 set number
-set relativenumber
 set hidden
 set cursorline
 set visualbell
