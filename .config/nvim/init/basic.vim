@@ -21,7 +21,7 @@ set smartcase
 set hlsearch
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
-let mapleader=" "
+let mapleader=","
 
 " jk = <Esc>
 inoremap jk <Esc>
@@ -31,9 +31,6 @@ nnoremap <Left> <Nop>
 nnoremap <Right> <Nop>
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
-
-" Customize auto-complete.
-set completeopt=menuone,noinsert
 
 " Clipboard support
 if has('clipboard')

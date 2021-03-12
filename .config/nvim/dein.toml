@@ -43,16 +43,12 @@ repo = 'mattn/vim-lsp-settings'
 depends = [ 'vim-lsp' ]
 
 [[plugins]]
-repo = 'Shougo/deoplete.nvim'
-hook_add = 'runtime dein/deoplete.vim'
+repo = 'prabirshrestha/asyncomplete.vim'
+hook_add = 'runtime dein/asyncomplete.vim'
 
 [[plugins]]
-repo = 'lighttiger2505/deoplete-vim-lsp'
-depends = [ 'deoplete.nvim', 'vim-lsp-settings' ]
-
-[[plugins]]
-repo = 'Shougo/neco-syntax'
-depends = ['deoplete.nvim']
+repo = 'prabirshrestha/asyncomplete-lsp.vim'
+depends = [ 'asyncomplete.vim', 'vim-lsp' ]
 
 [[plugins]]
 repo = 'itchyny/lightline.vim'
@@ -69,3 +65,6 @@ repo = 'tpope/vim-commentary'
 
 [[plugins]]
 repo = 'machakann/vim-highlightedyank'
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
