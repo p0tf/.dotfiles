@@ -8,4 +8,5 @@ if dein#load_state($HOME . '/.dein')
 
   call dein#end()
   call dein#save_state()
+
 endif
