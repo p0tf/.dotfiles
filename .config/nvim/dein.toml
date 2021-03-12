@@ -73,6 +73,9 @@ hook_add = 'runtime dein/lightline-lsp.vim'
 repo = 'tpope/vim-commentary'
 
 [[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
 repo = 'machakann/vim-highlightedyank'
 
 [[plugins]]
