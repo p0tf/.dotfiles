@@ -5,3 +5,15 @@ on_ft = ['toml']
 [[plugins]]
 repo = 'tokorom/vim-review'
 on_ft = ['review']
+
+[[plugins]]
+repo = 'lambdalisue/vim-manpager'
+on_cmd = ['Man', 'MANPAGER']
+
+[[plugins]]
+repo = 'lambdalisue/vim-pager'
+on_cmd = ['PAGER']
+
+[[plugins]]
+repo = 'powerman/vim-plugin-AnsiEsc'
+on_source = ['vim-pager']

@@ -51,11 +51,6 @@ repo = 'prabirshrestha/asyncomplete-file.vim'
 hook_add = 'runtime dein/asyncomp-file.vim'
 
 [[plugins]]
-repo = 'kitagry/asyncomplete-tabnine.vim'
-hook_add = 'runtime dein/asyncomp-tabnine.vim'
-build = './install.sh'
-
-[[plugins]]
 repo = 'prabirshrestha/asyncomplete-lsp.vim'
 depends = [ 'asyncomplete.vim', 'vim-lsp' ]
 
@@ -70,6 +65,9 @@ depends = [ 'lightline.vim', 'vim-lsp' ]
 hook_add = 'runtime dein/lightline-lsp.vim'
 
 [[plugins]]
+repo = 'cohama/lexima.vim'
+
+[[plugins]]
 repo = 'tpope/vim-commentary'
 
 [[plugins]]
@@ -77,6 +75,3 @@ repo = 'tpope/vim-surround'
 
 [[plugins]]
 repo = 'machakann/vim-highlightedyank'
-
-[[plugins]]
-repo = 'cohama/lexima.vim'

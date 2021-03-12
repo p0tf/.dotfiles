@@ -4,6 +4,10 @@ set fish_greeting
 # Set default editor to nvim
 set -Ux EDITOR nvim
 
+# set default pager to vim
+set -Ux PAGER "nvim -c PAGER -"
+set -Ux MANPAGER "nvim -c MANPAGER -"
+
 # Set cursor mode
 set fish_cursor_default block
 set fish_cursor_insert line
