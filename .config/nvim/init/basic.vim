@@ -1,5 +1,6 @@
 " Appearance
 set number
+set relativenumber
 set hidden
 set cursorline
 set visualbell
@@ -19,6 +20,8 @@ set ignorecase
 set smartcase
 set hlsearch
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
+
+let mapleader=" "
 
 " jk = <Esc>
 inoremap jk <Esc>
