@@ -10,7 +10,26 @@ hook_add = 'runtime dein/onedark.vim'
 repo = "editorconfig/editorconfig-vim"
 
 [[plugins]]
+repo = 'cohama/lexima.vim'
+
+[[plugins]]
+repo = 'tpope/vim-commentary'
+
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+[[plugins]]
+repo = 'machakann/vim-highlightedyank'
+
+[[plugins]]
 repo = 'lambdalisue/nerdfont.vim'
+
+[[plugins]]
+repo = 'lambdalisue/gina.vim'
+
+[[plugins]]
+repo = 'airblade/vim-gitgutter'
+hook_add = 'runtime dein/gitgutter.vim'
 
 [[plugins]]
 repo = 'lambdalisue/fern.vim'
@@ -28,11 +47,10 @@ hook_add = "runtime dein/fern-nerdfont.vim"
 repo = 'lambdalisue/fern-git-status.vim'
 
 [[plugins]]
-repo = 'lambdalisue/gina.vim'
+repo = 'hrsh7th/vim-vsnip'
 
 [[plugins]]
-repo = 'airblade/vim-gitgutter'
-hook_add = 'runtime dein/gitgutter.vim'
+repo = 'hrsh7th/vim-vsnip-integ'
 
 [[plugins]]
 repo = 'prabirshrestha/vim-lsp'
@@ -63,15 +81,3 @@ hook_add = 'runtime dein/lightline.vim'
 repo = 'watcol/lightline-lsp'
 depends = [ 'lightline.vim', 'vim-lsp' ]
 hook_add = 'runtime dein/lightline-lsp.vim'
-
-[[plugins]]
-repo = 'cohama/lexima.vim'
-
-[[plugins]]
-repo = 'tpope/vim-commentary'
-
-[[plugins]]
-repo = 'tpope/vim-surround'
-
-[[plugins]]
-repo = 'machakann/vim-highlightedyank'
