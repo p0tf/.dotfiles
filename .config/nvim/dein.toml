@@ -47,6 +47,15 @@ repo = 'prabirshrestha/asyncomplete.vim'
 hook_add = 'runtime dein/asyncomplete.vim'
 
 [[plugins]]
+repo = 'prabirshrestha/asyncomplete-file.vim'
+hook_add = 'runtime dein/asyncomp-file.vim'
+
+[[plugins]]
+repo = 'kitagry/asyncomplete-tabnine.vim'
+hook_add = 'runtime dein/asyncomp-tabnine.vim'
+build = './install.sh'
+
+[[plugins]]
 repo = 'prabirshrestha/asyncomplete-lsp.vim'
 depends = [ 'asyncomplete.vim', 'vim-lsp' ]
 
