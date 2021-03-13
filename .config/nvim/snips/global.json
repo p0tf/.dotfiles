@@ -29,6 +29,18 @@
       "${VIM:strftime(\"%Y/%m/%d %H:%M\")}"
     ]
   },
+  "---": {
+    "prefix": "hor-",
+    "body": [
+      "${VIM:repeat('-', 80 - col('.'))}"
+    ]
+  },
+  "===": {
+    "prefix": "hor=",
+    "body": [
+      "${VIM:repeat('=', 80 - col('.'))}"
+    ]
+  },
   "copyright": {
     "prefix": "c)",
     "body": [

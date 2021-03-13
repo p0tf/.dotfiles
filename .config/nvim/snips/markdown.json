@@ -1,0 +1,100 @@
+{
+  "link": {
+    "prefix": "l",
+    "body": [
+      "[${1:$TM_SELECTED_TEXT}](https://${2:example.com})"
+    ]
+  },
+  "link-copy": {
+    "prefix": "lc",
+    "body": [
+      "[${1:$TM_SELECTED_TEXT}](${VIM:@+})"
+    ]
+  },
+  "link-def": {
+    "prefix": "l:",
+    "body": [
+      "[${1:name}]: https://${2:example.com}"
+    ]
+  },
+  "link-defcopy": {
+    "prefix": "l:c",
+    "body": [
+      "[${1:name}]: ${VIM:@+}"
+    ]
+  },
+  "image": {
+    "prefix": "!",
+    "body": [
+      "![${1:$TM_SELECTED_TEXT}](https://${2:example.com})"
+    ]
+  },
+  "image-copy": {
+    "prefix": "!c",
+    "body": [
+      "![${1:$TM_SELECTED_TEXT}](${VIM:@+})"
+    ]
+  },
+  "link2": {
+    "prefix": "<",
+    "body": [
+      "<https://${1:example.com}>"
+    ]
+  },
+  "link2-copy": {
+    "prefix": "<c",
+    "body": [
+      "<https://${VIM:@+}>"
+    ]
+  },
+  "italic": {
+    "prefix": "*",
+    "body": [
+      "*${1:italic}*"
+    ]
+  },
+  "bold": {
+    "prefix": "**",
+    "body": [
+      "**${1:italic}**"
+    ]
+  },
+  "bold-italic": {
+    "prefix": "***",
+    "body": [
+      "***${1:bold-italic}***"
+    ]
+  },
+  "table1": {
+    "prefix": "t1",
+    "body": [
+      "| ${1:a} |",
+      "| ------ |",
+      "| ${0} |"
+    ]
+  },
+  "table2": {
+    "prefix": "t2",
+    "body": [
+      "| ${1:a} | ${2:b} |",
+      "| ------ | ------ |",
+      "| ${0} |"
+    ]
+  },
+  "table3": {
+    "prefix": "t3",
+    "body": [
+      "| ${1:a} | ${2:b} | ${3:c} |",
+      "| ------ | ------ | ------ |",
+      "| ${0} |"
+    ]
+  },
+  "table4": {
+    "prefix": "t4",
+    "body": [
+      "| ${1:a} | ${2:b} | ${3:c} | ${4:d} |",
+      "| ------ | ------ | ------ | ------ |",
+      "| ${0} |"
+    ]
+  }
+}
