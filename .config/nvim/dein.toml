@@ -57,6 +57,7 @@ repo = 'lambdalisue/fern-git-status.vim'
 
 [[plugins]]
 repo = 'hrsh7th/vim-vsnip'
+hook_add = 'runtime dein/vsnip.vim'
 
 [[plugins]]
 repo = 'hrsh7th/vim-vsnip-integ'
