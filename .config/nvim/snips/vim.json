@@ -1,0 +1,72 @@
+{
+  "if": {
+    "prefix": "if",
+    "body": [
+      "if ${1:condition}",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "endif"
+    ]
+  },
+  "elseif": {
+    "prefix": "ei",
+    "body": [
+      "elseif ${1:condition}",
+      "  ${0:$TM_SELECTED_TEXT}"
+    ]
+  },
+  "else": {
+    "prefix": "el",
+    "body": [
+      "else",
+      "  ${0:$TM_SELECTED_TEXT}"
+    ]
+  },
+  "for": {
+    "prefix": "for",
+    "body": [
+      "for ${1:i} in ${2:items}",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "endfor"
+    ]
+  },
+  "while": {
+    "prefix": "wh",
+    "body": [
+      "while ${1:condition}",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "endwhile"
+    ]
+  },
+  "function": {
+    "prefix": "fn",
+    "body": [
+      "function! ${1:name}(${2:args})",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "endfunction"
+    ]
+  },
+  "augroup": {
+    "prefix": "au",
+    "body": [
+      "augroup ${1:Name}",
+      "  aucmd ${0}",
+      "augroup END"
+    ]
+  },
+  "guard": {
+    "prefix": "guard",
+    "body": [
+      "if exists('${1:${VIM:expand('%:r')}_loaded}')",
+      "  finish",
+      "endif",
+      "let $1 = 1",
+      "${0}"
+    ]
+  },
+  "noremap": {
+    "prefix": "no",
+    "body": [
+      "noremap"
+    ]
+  }
+}
