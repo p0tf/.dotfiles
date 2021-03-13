@@ -25,6 +25,15 @@ repo = 'machakann/vim-highlightedyank'
 repo = 'lambdalisue/nerdfont.vim'
 
 [[plugins]]
+repo = 'liuchengxu/vim-clap'
+build = './install.sh'
+hook_add = 'runtime dein/clap.vim'
+
+[[plugins]]
+repo = 'tamago324/vim-clap-help'
+depends = [ 'vim-clap' ]
+
+[[plugins]]
 repo = 'lambdalisue/gina.vim'
 
 [[plugins]]
