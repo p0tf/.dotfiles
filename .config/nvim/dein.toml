@@ -1,6 +1,5 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
-hook_add = 'runtime dein/dein.vim'
 
 [[plugins]]
 repo = 'joshdick/onedark.vim'
