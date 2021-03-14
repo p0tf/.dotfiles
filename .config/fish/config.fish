@@ -5,7 +5,6 @@ set fish_greeting
 set -Ux EDITOR nvim
 
 # set default pager to vim
-set -Ux PAGER "nvim -c PAGER -"
 set -Ux MANPAGER "nvim -c MANPAGER -"
 
 # Set cursor mode
