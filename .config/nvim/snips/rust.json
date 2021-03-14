@@ -156,7 +156,7 @@
   "derive": {
     "prefix": "der",
     "body": [
-      "#[derive(${1:Debug})]"
+      "#[derive(${1:Clone, Debug, PartialEq, Eq})]"
     ]
   },
   "attr": {

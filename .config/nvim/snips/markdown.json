@@ -48,19 +48,19 @@
     ]
   },
   "italic": {
-    "prefix": "*",
+    "prefix": "it",
     "body": [
       "*${1:italic}*"
     ]
   },
   "bold": {
-    "prefix": "**",
+    "prefix": "bo",
     "body": [
-      "**${1:italic}**"
+      "**${1:bold}**"
     ]
   },
   "bold-italic": {
-    "prefix": "***",
+    "prefix": "bit",
     "body": [
       "***${1:bold-italic}***"
     ]

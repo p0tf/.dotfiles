@@ -5,6 +5,18 @@
       "${1|foo,bar,baz,hoge,fuga,piyo|}"
     ]
   },
+  "clipboard": {
+    "prefix": "clip",
+    "body": [
+      "${VIM:@+}"
+    ]
+  },
+  "myname": {
+    "prefix": "whoami",
+    "body": [
+      "${VIM:g:snips_author}"
+    ]
+  },
   "lorem": {
     "prefix": "lorem",
     "body": [
