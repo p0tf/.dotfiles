@@ -69,6 +69,7 @@ hook_add = 'runtime dein/lsp.vim'
 [[plugins]]
 repo = 'mattn/vim-lsp-settings'
 depends = [ 'vim-lsp' ]
+hook_add = 'runtime dein/lsp-settings.vim'
 
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete.vim'
