@@ -15,6 +15,7 @@ set smartindent
 
 " Search
 set incsearch
+set inccommand=split
 set ignorecase
 set smartcase
 set hlsearch
