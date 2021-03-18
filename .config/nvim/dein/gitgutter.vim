@@ -3,5 +3,5 @@ let g:gitgutter_sign_modified = ' '
 let g:gitgutter_sign_removed = ' '
 
 nnoremap <Space>gp :GitGutterPreviewHunk<CR>
-nnoremap <Space>gs :GitGutterStageHunk<CR>
-nnoremap <Space>gu :GitGutterUndoHunk<CR>
+nnoremap <Space>g< :GitGutterStageHunk<CR>
+nnoremap <Space>g> :GitGutterUndoHunk<CR>
