@@ -2,7 +2,7 @@
 # VERSION: 3.0
 SETUVAR --export EDITOR:nvim
 SETUVAR --export MANPAGER:nvim\x20\x2dc\x20MANPAGER\x20\x2d
-SETUVAR --export PAGER:nvim\x20\x2dc\x20PAGER\x20\x2d
+SETUVAR --export PAGER:nvimpager
 SETUVAR RUST_SRC_PATH:/home/kanta/\x2erustup/toolchains/stable\x2dx86_64\x2dunknown\x2dlinux\x2dgnu/lib/rustlib/src/rust/library/
 SETUVAR __fish_initialized:3100
 SETUVAR fish_color_autosuggestion:4c566a

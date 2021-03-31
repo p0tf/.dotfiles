@@ -7,3 +7,5 @@
 .config/xfce4
 .editorconfig
 .local/share/applications/nvim.desktop
+.local/bin/nvimpager
+.local/bin/i3lock-arc
