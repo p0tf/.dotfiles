@@ -4,5 +4,6 @@
 .config/i3
 .config/picom.conf
 .config/rofi
+.config/xfce4
 .editorconfig
 .local/share/applications/nvim.desktop

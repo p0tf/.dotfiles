@@ -43,6 +43,14 @@ $ yes | ./install.sh
 - `.config/rofi`
     - Needed
         - `rofi`
+- `.config/xfce4`
+    - Needed
+        - `xfce4-panel`
+        - `xfce4-power-manager`
+        - `xfce4-i3-workspace-plugin`
+        - `xfce4-pulseaudio-plugin`
+    - Optional
+        - `pavucontrol`
 - `.editorconfig`
     - Needed
         - `editorconfig-vim`
