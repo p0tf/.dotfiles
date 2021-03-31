@@ -17,12 +17,7 @@ $ yes | ./install.sh
 - `.config/nvim`
     - Needed
         - `nvim`
-        - `python-pynvim`
     - Optional
-        - `python-jedi`
-        - `rust`
-        - `rust-racer`
-        - `crystal`
         - `xclip` or `xsel`
 - `.config/alacritty.yml`
     - Needed
@@ -30,6 +25,24 @@ $ yes | ./install.sh
 - `.config/fish`
     - Needed
         - `fish`
+- `.config/i3`
+    - Needed
+        - `i3-gaps`
+    - Optional
+        - `xfce4-panel`
+        - `xfce4-notifyd`
+        - `xfce-polkit`
+        - `ibus`
+        - `feh`
+        - `xss-lock`
+        - `i3lock-color` (`i3lock-arc-dark`)
+        - `picom`
+- `.config/picom.conf`
+    - Needed
+        - `picom`
+- `.config/rofi`
+    - Needed
+        - `rofi`
 - `.editorconfig`
     - Needed
         - `editorconfig-vim`
