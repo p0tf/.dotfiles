@@ -1,5 +1,8 @@
 .config/nvim
 .config/alacritty.yml
 .config/fish
+.config/i3
+.config/picom.conf
+.config/rofi
 .editorconfig
 .local/share/applications/nvim.desktop

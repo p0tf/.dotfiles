@@ -1,0 +1,5 @@
+rofi.modi: drun,window,run,system:~/.config/rofi/system.sh
+rofi.sidebar-mode: true
+rofi.kb-mode-previous: Shift+Left,Super+h
+rofi.kb-mode-next: Shift+Right,Super+l
+rofi.theme: /usr/share/rofi/themes/Arc-Dark.rasi
