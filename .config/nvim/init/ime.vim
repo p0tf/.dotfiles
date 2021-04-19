@@ -4,6 +4,6 @@ if executable('fcitx5')
 endif
 
 if executable('ibus')
-   autocmd InsertLeave * if mode() != 'i' | call system('ibus engine xkb:us::eng')
-   autocmd CmdlineLeave * if mode() != 'c' | call system('ibus engine xkb:us::eng')
+   autocmd InsertLeave * if mode() != 'i' | call system('ibus engine xkb:jp::jpn')
+   autocmd CmdlineLeave * if mode() != 'c' | call system('ibus engine xkb:jp::jpn')
 endif

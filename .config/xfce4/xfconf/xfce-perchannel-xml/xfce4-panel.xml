@@ -16,6 +16,8 @@
         <value type="int" value="1"/>
         <value type="int" value="12"/>
         <value type="int" value="11"/>
+        <value type="int" value="8"/>
+        <value type="int" value="9"/>
         <value type="int" value="5"/>
         <value type="int" value="4"/>
         <value type="int" value="2"/>
@@ -44,7 +46,7 @@
     <property name="plugin-2" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="firefox.instance12178;firefox.instance98910"/>
+      <property name="mpris-players" type="string" value="firefox.instance12178;firefox.instance1437;firefox.instance2796;firefox.instance2850;firefox.instance42213;firefox.instance4542;firefox.instance4803;firefox.instance4884;firefox.instance5266;firefox.instance5285;firefox.instance802;firefox.instance806;firefox.instance8558;firefox.instance860;firefox.instance98910"/>
     </property>
     <property name="plugin-4" type="string" value="power-manager-plugin"/>
     <property name="clipman" type="empty">
@@ -59,6 +61,7 @@
     <property name="plugin-5" type="string" value="notification-plugin"/>
     <property name="plugin-6" type="string" value="systray">
       <property name="known-items" type="array">
+        <value type="string" value="zoom"/>
         <value type="string" value="KDE Connect Indicator"/>
         <value type="string" value="Fcitx"/>
       </property>
@@ -67,10 +70,30 @@
       <property name="hide-new-items" type="bool" value="false"/>
       <property name="single-row" type="bool" value="false"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="teams"/>
+        <value type="string" value="cherrytree"/>
         <value type="string" value="ibus panel"/>
         <value type="string" value="uim"/>
         <value type="string" value="ibus-ui-gtk3"/>
         <value type="string" value="fcitx5 tray window"/>
+      </property>
+    </property>
+    <property name="plugin-8" type="string" value="cpugraph"/>
+    <property name="plugin-9" type="string" value="systemload">
+      <property name="cpu" type="empty">
+        <property name="enabled" type="bool" value="false"/>
+      </property>
+      <property name="network" type="empty">
+        <property name="enabled" type="bool" value="false"/>
+      </property>
+      <property name="swap" type="empty">
+        <property name="enabled" type="bool" value="false"/>
+      </property>
+      <property name="uptime" type="empty">
+        <property name="enabled" type="bool" value="false"/>
+      </property>
+      <property name="memory" type="empty">
+        <property name="label" type="string" value=""/>
       </property>
     </property>
   </property>
