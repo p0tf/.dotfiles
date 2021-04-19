@@ -14,9 +14,9 @@ $ yes | ./install.sh
     - Needed
         - `git`
         - `which`
-- `.config/nvim`
+- `.vim`
     - Needed
-        - `nvim`
+        - `vim`
     - Optional
         - `xclip` or `xsel`
 - `.config/alacritty.yml`

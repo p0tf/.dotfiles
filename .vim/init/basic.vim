@@ -1,3 +1,5 @@
+set nocompatible
+
 " Appearance
 set number
 set hidden
@@ -5,6 +7,19 @@ set cursorline
 set visualbell
 set list
 set listchars=tab:\|-,trail:.
+syntax on
+filetype plugin indent on
+
+autocmd Syntax * syntax on
+
+" Fix backspace behavior
+noremap! <C-?> <BS>
+noremap! <C-M> <CR>
+
+" Change Cursor Shape
+let &t_SI.="\e[6 q"
+let &t_SR.="\e[4 q"
+let &t_EI.="\e[2 q"
 
 " Indent Behavior
 set expandtab
@@ -15,7 +30,6 @@ set smartindent
 
 " Search
 set incsearch
-set inccommand=split
 set ignorecase
 set smartcase
 set hlsearch
@@ -33,6 +47,4 @@ nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
 
 " Clipboard support
-if has('clipboard')
-    set clipboard+=unnamedplus
-endif
+set clipboard^=unnamedplus

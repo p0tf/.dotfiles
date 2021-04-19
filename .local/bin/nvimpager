@@ -1,4 +1,0 @@
-#!/usr/bin/env sh
-cat > __stdin__
-nvim -c "te cat __stdin__"
-rm __stdin__

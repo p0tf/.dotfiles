@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+cat > __stdin__
+vim --not-a-term -c "term ++curwin bat --plain --paging=never --theme=ansi __stdin__"
+rm __stdin__

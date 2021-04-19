@@ -1,5 +1,7 @@
 nnoremap <Space>U :call<Space>lightline#update()<CR>
 
+set laststatus=2
+
 let g:lightline = {
 \   'colorscheme': 'onedark',
 \   'active': {

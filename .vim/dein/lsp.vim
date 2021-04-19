@@ -26,3 +26,12 @@ nmap <buffer> <Space>n <Plug>(lsp-next-diagnostic)
 nmap <buffer> <Space>gd <Plug>(lsp-document-diagnostics)
 nmap <buffer> <Space>gs <Plug>(lsp-document-symbol)
 nmap <buffer> <Space>gS <Plug>(lsp-workspace-symbol)
+nmap <buffer> <expr><C-f> lsp#scroll(+8)
+nmap <buffer> <expr><C-d> lsp#scroll(-8)
+
+if !has('nvim')
+  autocmd User lsp_float_opened
+    \ call popup_setoptions(lsp#ui#vim#output#getpreviewwinid(),
+    \   {'border': [0, 0, 0, 0],
+    \    'padding': [1, 1, 1, 1]})
+end
