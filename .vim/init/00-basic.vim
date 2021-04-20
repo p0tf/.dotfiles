@@ -7,10 +7,10 @@ set cursorline
 set visualbell
 set list
 set listchars=tab:\|-,trail:.
-syntax on
-filetype plugin indent on
 
-autocmd Syntax * syntax on
+filetype off
+filetype plugin indent off
+syntax off
 
 " Fix backspace behavior
 noremap! <C-?> <BS>
