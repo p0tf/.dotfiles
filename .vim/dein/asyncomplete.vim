@@ -4,7 +4,9 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 if exists('g:lexima_no_default_rules')
   call lexima#set_default_rules()
-  inoremap <expr> <cr> pumvisible() ? asyncomplete#close_popup() : lexima#expand('<LT>CR>', 'i')
+  inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() : lexima#expand('<LT>CR>', 'i')
+else
+  inoremap <expr> <CR> pumvisible() ? asyncomplete#close_popup() : "\<CR>"
 endif
 
 " Customize completeopt.

@@ -14,7 +14,6 @@ syntax off
 
 " Fix backspace behavior
 noremap! <C-?> <BS>
-noremap! <C-M> <CR>
 
 " Change Cursor Shape
 let &t_SI.="\e[6 q"
@@ -35,7 +34,7 @@ set smartcase
 set hlsearch
 nnoremap <silent><Esc><Esc> :<C-u>set nohlsearch!<CR>
 
-let mapleader=","
+let mapleader=" "
 
 " jk = <Esc>
 inoremap jk <Esc>

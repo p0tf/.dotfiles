@@ -16,15 +16,15 @@ highlight link LspHintHighlight ALEWarning
 highlight link LspInformationHighlight ALEInfo
 
 " Key mappings
-nmap <buffer> <Space>a <Plug>(lsp-code-action)
-nmap <buffer> <Space>d :sp<CR>:LspDefinition<CR>
-nmap <buffer> <Space>D <Plug>(lsp-hover)
-nmap <buffer> <Space>r <Plug>(lsp-rename)
-nmap <buffer> <Space>f <Plug>(lsp-document-format)
-nmap <buffer> <Space>p <Plug>(lsp-previous-diagnostic)
-nmap <buffer> <Space>n <Plug>(lsp-next-diagnostic)
-nmap <buffer> <Space>gd <Plug>(lsp-document-diagnostics)
-nmap <buffer> <Space>gS <Plug>(lsp-workspace-symbol)
+nmap <buffer> <Leader>a <Plug>(lsp-code-action)
+nmap <buffer> <Leader>d :sp<CR>:LspDefinition<CR>
+nmap <buffer> <Leader>D <Plug>(lsp-hover)
+nmap <buffer> <Leader>r <Plug>(lsp-rename)
+nmap <buffer> <Leader>f <Plug>(lsp-document-format)
+nmap <buffer> <Leader>gd <Plug>(lsp-document-diagnostics)
+nmap <buffer> <Leader>gS <Plug>(lsp-workspace-symbol)
+nmap <buffer> [d <Plug>(lsp-previous-diagnostic)
+nmap <buffer> ]d <Plug>(lsp-next-diagnostic)
 nmap <buffer> <expr><C-f> lsp#scroll(+8)
 nmap <buffer> <expr><C-d> lsp#scroll(-8)
 

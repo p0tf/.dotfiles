@@ -1,2 +1,2 @@
-" Mapping Alt+E
-nnoremap <Space>e :<C-U>Fern . -drawer -toggle<CR>
+" Mapping
+nnoremap <Leader>e :<C-U>Fern . -drawer -toggle<CR>
