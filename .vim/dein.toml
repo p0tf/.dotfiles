@@ -29,9 +29,6 @@ repo = 'junegunn/fzf.vim'
 hook_add = 'runtime dein/fzf.vim'
 
 [[plugins]]
-repo = 'liuchengxu/vista.vim'
-
-[[plugins]]
 repo = 'lambdalisue/gina.vim'
 
 [[plugins]]
@@ -68,6 +65,10 @@ hook_add = 'runtime dein/lsp.vim'
 repo = 'mattn/vim-lsp-settings'
 depends = [ 'vim-lsp' ]
 hook_add = 'runtime dein/lsp-settings.vim'
+
+[[plugins]]
+repo = 'liuchengxu/vista.vim'
+hook_add = 'runtime dein/vista.vim'
 
 [[plugins]]
 repo = 'prabirshrestha/asyncomplete.vim'
