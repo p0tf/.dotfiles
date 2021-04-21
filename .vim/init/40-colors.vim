@@ -6,19 +6,17 @@ command! -nargs=0 Dark call s:dark()
 command! -nargs=0 Light call s:light()
 
 function! s:dark()
-  set background=dark
   colorscheme onedark
 endfunction
 
 function! s:light()
-  set background=light
-  colorscheme one
+  colorscheme onelight
 endfunction
 
 if 18 <= strftime("%H") && strftime("%H") < 22
   let g:lightline.colorscheme = "onedark"
   Dark
 else
-  let g:lightline.colorscheme = "one"
+  let g:lightline.colorscheme = "onelight"
   Light
 endif
