@@ -3,9 +3,11 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'joshdick/onedark.vim'
+hook_add = 'runtime dein/onedark.vim'
 
 [[plugins]]
 repo = 'rakr/vim-one'
+hook_add = 'runtime dein/one.vim'
 
 [[plugins]]
 repo = "editorconfig/editorconfig-vim"
