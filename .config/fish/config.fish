@@ -8,6 +8,27 @@ set -Ux EDITOR vim
 set -Ux MANPAGER "vim -c MANPAGER -"
 set -Ux PAGER "vimpager"
 
+# Set colors
+set fish_color_normal         brblack
+set fish_color_autosuggestion brwhite
+set fish_color_cancel         brcyan
+set fish_color_command        brpurple
+set fish_color_comment        brwhite
+set fish_color_cwd            brred
+set fish_color_end            brblack
+set fish_color_error          brred
+set fish_color_escape         brcyan
+set fish_color_host           brgreen
+set fish_color_host_remote    bryellow
+set fish_color_match          brcyan --underline
+set fish_color_operator       brpurple
+set fish_color_param          brred
+set fish_color_quote          brgreen
+set fish_color_redirection    brcyan
+set fish_color_search_match   --background=brwhite
+set fish_color_selection      --background=brwhite
+set fish_color_user           brblue
+
 # Set cursor mode
 set fish_cursor_default block
 set fish_cursor_insert line

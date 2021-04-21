@@ -1,4 +1,4 @@
-let g:vsnip_snippet_dir = $HOME . '/.config/nvim/snips'
+let g:vsnip_snippet_dir = $HOME . '/.vim/snips'
 let g:snips_author = trim(system('git config user.name'))
 
 imap <expr> <C-j>   vsnip#expandable()  ? '<Plug>(vsnip-expand)'         : '<C-j>'

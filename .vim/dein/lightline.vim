@@ -1,9 +1,25 @@
 nnoremap <Space>U :call<Space>lightline#update()<CR>
 
-set laststatus=2
+augroup LightLineColorscheme
+  autocmd!
+  autocmd ColorScheme * call s:lightline_update()
+augroup END
 
+function! s:lightline_update()
+  if !exists('g:loaded_lightline')
+    return
+  endif
+  try
+    let g:lightline.colorscheme = g:colors_name
+    call lightline#init()
+    call lightline#colorscheme()
+    call lightline#update()
+  catch
+  endtry
+endfunction
+
+set laststatus=2
 let g:lightline = {
-\   'colorscheme': 'onedark',
 \   'active': {
 \       'left': [['mode'], ['filename', 'modified']],
 \       'right': [['lineinfo'], ['git'], ['lsp-ok', 'lsp-error', 'lsp-warn', 'lsp-info', 'lsp-hint']]
