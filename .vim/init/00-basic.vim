@@ -47,3 +47,7 @@ nnoremap <Down> <Nop>
 
 " Clipboard support
 set clipboard^=unnamedplus
+
+" Terminal Config
+tnoremap <Esc> <C-\><C-n>
+autocmd TerminalOpen * set nonumber

@@ -1,3 +1,6 @@
+set splitright
+set splitbelow
+
 " Windows
 nnoremap <silent> <Leader>s :<C-u>new<CR>
 nnoremap <silent> <Leader>S :<C-u>split<CR>
@@ -20,6 +23,10 @@ nnoremap <silent> <Leader>< <C-w><
 nnoremap <silent> <Leader>> <C-w>>
 nnoremap <silent> <Leader>+ <C-w>+
 nnoremap <silent> <Leader>- <C-w>-
+
+" Terminal
+nnoremap <silent> <Leader><CR> :<C-u>vertical terminal<CR>
+nnoremap <silent> <Leader><S-CR> :<C-u>terminal<CR>
 
 " Tabpages
 nnoremap <silent> [t :<C-u>tabprevious<CR>

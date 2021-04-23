@@ -29,6 +29,9 @@ repo = 'tpope/vim-surround'
 repo = 'machakann/vim-highlightedyank'
 
 [[plugins]]
+repo = 'markonm/traces.vim'
+
+[[plugins]]
 repo = 'lambdalisue/nerdfont.vim'
 
 [[plugins]]
@@ -37,6 +40,9 @@ hook_add = 'runtime dein/fzf.vim'
 
 [[plugins]]
 repo = 'lambdalisue/gina.vim'
+
+[[plugins]]
+repo = 'skanehira/gh.vim'
 
 [[plugins]]
 repo = 'airblade/vim-gitgutter'

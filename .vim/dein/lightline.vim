@@ -57,8 +57,10 @@ function! Mode()
     let m = 'NOR'
   elseif i == 'R'
     let m = 'REP'
-  else
+  elseif i == 'v'
     let m = 'VIS'
+  elseif i == 't'
+    let m = 'TER'
   endif
 
   if &paste
