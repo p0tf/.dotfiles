@@ -15,6 +15,9 @@ highlight link LspWarningHighlight ALEWarning
 highlight link LspHintHighlight ALEWarning
 highlight link LspInformationHighlight ALEInfo
 
+" Format on Save
+autocmd BufWritePre <buffer> LspDocumentFormatSync
+
 " Key mappings
 nmap <buffer> <Leader>a <Plug>(lsp-code-action)
 nmap <buffer> <Leader>d :sp<CR>:LspDefinition<CR>

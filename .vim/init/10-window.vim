@@ -26,7 +26,11 @@ nnoremap <silent> <Leader>- <C-w>-
 
 " Terminal
 nnoremap <silent> <Leader><CR> :<C-u>vertical terminal<CR>
-nnoremap <silent> <Leader><S-CR> :<C-u>terminal<CR>
+if has('gui_running')
+  nnoremap <silent> <Leader><S-CR> :<C-u>terminal<CR>
+else
+  nnoremap <silent> <Leader>✠ :<C-u>terminal<CR>
+endif
 
 " Tabpages
 nnoremap <silent> [t :<C-u>tabprevious<CR>

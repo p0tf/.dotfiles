@@ -5,6 +5,9 @@ font:
   size: 7.5
 background_opacity: 0.95
 
+key_bindings:
+  - { key: Return,   mods: Shift,   chars: "✠" }
+
 # Nord
 colors: &dark
    primary:

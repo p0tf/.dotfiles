@@ -20,6 +20,9 @@ repo = 'cohama/lexima.vim'
 hook_add = 'runtime dein/lexima.vim'
 
 [[plugins]]
+repo = 'lambdalisue/edita.vim'
+
+[[plugins]]
 repo = 'tpope/vim-commentary'
 
 [[plugins]]
