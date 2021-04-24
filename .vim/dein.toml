@@ -30,6 +30,7 @@ repo = 'machakann/vim-highlightedyank'
 
 [[plugins]]
 repo = 'markonm/traces.vim'
+hook_add = 'runtime dein/traces.vim'
 
 [[plugins]]
 repo = 'lambdalisue/nerdfont.vim'

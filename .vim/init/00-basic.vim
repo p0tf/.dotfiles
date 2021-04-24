@@ -7,6 +7,8 @@ set cursorline
 set visualbell
 set list
 set listchars=tab:\|-,trail:.
+set wildmenu
+set wildmode=longest,list
 
 filetype off
 filetype plugin indent off
@@ -49,5 +51,5 @@ nnoremap <Down> <Nop>
 set clipboard^=unnamedplus
 
 " Terminal Config
-tnoremap <Esc> <C-\><C-n>
+tnoremap <F1> <C-W>N
 autocmd TerminalOpen * set nonumber
