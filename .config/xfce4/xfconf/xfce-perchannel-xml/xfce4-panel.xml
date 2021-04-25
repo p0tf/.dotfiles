@@ -46,7 +46,7 @@
     <property name="plugin-2" type="string" value="pulseaudio">
       <property name="enable-keyboard-shortcuts" type="bool" value="true"/>
       <property name="show-notifications" type="bool" value="true"/>
-      <property name="mpris-players" type="string" value="firefox.instance12178;firefox.instance1437;firefox.instance2395;firefox.instance2796;firefox.instance2850;firefox.instance30649;firefox.instance42213;firefox.instance4542;firefox.instance4803;firefox.instance4884;firefox.instance5266;firefox.instance5285;firefox.instance54070;firefox.instance7232;firefox.instance7339;firefox.instance802;firefox.instance806;firefox.instance8558;firefox.instance860;firefox.instance899;firefox.instance940;firefox.instance98910"/>
+      <property name="mpris-players" type="string" value="chromium.instance150726;firefox.instance12178;firefox.instance1437;firefox.instance2395;firefox.instance2796;firefox.instance2850;firefox.instance30649;firefox.instance42213;firefox.instance4542;firefox.instance4803;firefox.instance4884;firefox.instance5266;firefox.instance5285;firefox.instance54070;firefox.instance7232;firefox.instance7339;firefox.instance802;firefox.instance806;firefox.instance8558;firefox.instance860;firefox.instance899;firefox.instance940;firefox.instance98910;Lollypop;pragha"/>
     </property>
     <property name="plugin-4" type="string" value="power-manager-plugin"/>
     <property name="clipman" type="empty">
@@ -70,6 +70,7 @@
       <property name="hide-new-items" type="bool" value="false"/>
       <property name="single-row" type="bool" value="false"/>
       <property name="known-legacy-items" type="array">
+        <value type="string" value="pragha music player"/>
         <value type="string" value="teams"/>
         <value type="string" value="cherrytree"/>
         <value type="string" value="ibus panel"/>

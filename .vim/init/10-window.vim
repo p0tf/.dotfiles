@@ -6,8 +6,6 @@ nnoremap <silent> <Leader>s :<C-u>new<CR>
 nnoremap <silent> <Leader>S :<C-u>split<CR>
 nnoremap <silent> <Leader>v :<C-u>vnew<CR>
 nnoremap <silent> <Leader>V :<C-u>vsplit<CR>
-nnoremap <silent> <Leader>q :<C-u>close<CR>
-nnoremap <silent> <Leader>q! :<C-u>close!<CR>
 nnoremap <silent> <Leader>t <C-w>t
 nnoremap <silent> <Leader>b <C-w>b
 nnoremap <silent> <Leader>j <C-w>j

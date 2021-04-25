@@ -57,9 +57,13 @@ function! Mode()
     let m = 'NOR'
   elseif i == 'R'
     let m = 'REP'
-  elseif i == 'v'
+  elseif i ==# 'v'
     let m = 'VIS'
-  elseif i == 't'
+  elseif i ==# 'V'
+    let m = 'VIS LINE'
+  elseif i == "\<C-v>"
+    let m = 'VIS BLOCK'
+  else
     let m = 'TER'
   endif
 
