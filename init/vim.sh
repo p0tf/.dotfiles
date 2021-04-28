@@ -24,10 +24,3 @@ _main() {
 }
 
 _main
-
-cat << EOF > ~/.nvim_startup
-#!/bin/sh
-sleep 0.1
-nvim
-EOF
-chmod +x ~/.nvim_startup
