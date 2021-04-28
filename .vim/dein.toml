@@ -51,9 +51,6 @@ hook_add = 'runtime dein/fzf.vim'
 
 # External Integrations
 [[plugins]]
-repo = 'skanehira/gh.vim'
-
-[[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = 'runtime dein/gitgutter.vim'
 

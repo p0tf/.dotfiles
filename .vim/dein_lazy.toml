@@ -19,14 +19,6 @@ repo = 'lambdalisue/vim-manpager'
 on_cmd = ['Man', 'MANPAGER']
 
 [[plugins]]
-repo = 'thinca/vim-quickrun'
-on_cmd = ['QuickRun']
-
-[[plugins]]
-repo = 'lambdalisue/gina.vim'
-on_cmd = ['Gina']
-
-[[plugins]]
 repo = 'liuchengxu/vista.vim'
 on_cmd = ['Vista']
 hook_add = 'runtime dein/vista.vim'
