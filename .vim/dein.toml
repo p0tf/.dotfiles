@@ -46,9 +46,6 @@ hook_add = 'runtime dein/traces.vim'
 repo = 'thinca/vim-quickrun'
 
 [[plugins]]
-repo = 'lambdalisue/nerdfont.vim'
-
-[[plugins]]
 repo = 'junegunn/fzf.vim'
 hook_add = 'runtime dein/fzf.vim'
 
@@ -61,21 +58,6 @@ repo = 'skanehira/gh.vim'
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = 'runtime dein/gitgutter.vim'
-
-[[plugins]]
-repo = 'lambdalisue/fern.vim'
-hook_add = 'runtime dein/fern.vim'
-
-[[plugins]]
-repo = 'lambdalisue/fern-hijack.vim'
-depends = [ 'fern.vim' ]
-
-[[plugins]]
-repo = 'lambdalisue/fern-renderer-nerdfont.vim'
-hook_add = "runtime dein/fern-nerdfont.vim"
-
-[[plugins]]
-repo = 'lambdalisue/fern-git-status.vim'
 
 [[plugins]]
 repo = 'hrsh7th/vim-vsnip'
