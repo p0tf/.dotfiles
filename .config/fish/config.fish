@@ -2,7 +2,7 @@
 set fish_greeting
 
 # Set default editor to nvim
-set -Ux EDITOR vim
+set -Ux EDITOR "/usr/bin/vim"
 
 # set default pager to vim
 set -Ux MANPAGER "vim -c MANPAGER -"

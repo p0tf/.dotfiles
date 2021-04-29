@@ -18,10 +18,10 @@ hook_add = 'runtime dein/onelight.vim'
 repo = "editorconfig/editorconfig-vim"
 
 [[plugins]]
-repo = 'lambdalisue/edita.vim'
+repo = 'watcol/edita.vim'
 
 
-# Editor Extensions.
+# Editor Extensions
 [[plugins]]
 repo = 'cohama/lexima.vim'
 hook_add = 'runtime dein/lexima.vim'
@@ -50,6 +50,9 @@ hook_add = 'runtime dein/fzf.vim'
 
 
 # External Integrations
+[[plugins]]
+repo = 'lambdalisue/gina.vim'
+
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = 'runtime dein/gitgutter.vim'
@@ -89,6 +92,9 @@ depends = [ 'asyncomplete.vim', 'vim-lsp' ]
 
 
 # Statusline
+[[plugins]]
+repo = 'lambdalisue/nerdfont.vim'
+
 [[plugins]]
 repo = 'itchyny/lightline.vim'
 depends = [ 'nerdfont.vim', 'gina.vim', 'vim-gitgutter', 'vim-lsp' ]
