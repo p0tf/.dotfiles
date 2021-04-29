@@ -22,4 +22,3 @@ on_cmd = ['Man', 'MANPAGER']
 repo = 'liuchengxu/vista.vim'
 on_cmd = ['Vista']
 hook_add = 'runtime dein/vista.vim'
-

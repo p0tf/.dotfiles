@@ -26,8 +26,10 @@ nnoremap <silent> <Leader>- <C-w>-
 nnoremap <silent> <Leader><CR> :<C-u>vertical terminal<CR>
 if has('gui_running')
   nnoremap <silent> <Leader><S-CR> :<C-u>terminal<CR>
+  nnoremap <silent> <Leader><C-CR> :<C-u>terminal ++curwin<CR>
 else
   nnoremap <silent> <Leader>✠ :<C-u>terminal<CR>
+  nnoremap <silent> <Leader>✢ :<C-u>terminal ++curwin<CR>
 endif
 
 " Tabpages

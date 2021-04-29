@@ -1,7 +1,7 @@
 # Clear Greeting Message
 set fish_greeting
 
-# Set default editor to nvim
+# Set default editor to vim
 set -Ux EDITOR "/usr/bin/vim"
 
 # set default pager to vim

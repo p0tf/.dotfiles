@@ -7,6 +7,7 @@ background_opacity: 0.95
 
 key_bindings:
   - { key: Return,   mods: Shift,   chars: "✠" }
+  - { key: Return,   mods: Control,   chars: "✢" }
 
 # Nord
 colors: &dark

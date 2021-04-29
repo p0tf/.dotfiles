@@ -47,6 +47,12 @@ nnoremap <Right> <Nop>
 nnoremap <Up> <Nop>
 nnoremap <Down> <Nop>
 
+" Enable Mouse
+set mouse=a
+set ttymouse=xterm2
+nnoremap <ScrollWheelDown> 3j
+nnoremap <ScrollWheelUp> 3k
+
 " Clipboard support
 set clipboard^=unnamedplus
 
