@@ -18,7 +18,7 @@ set $bg-placeholder     #00FF00
 set $bg-background      #282f39
 set $text-focused       #FFFFFF
 set $text-focusedi      #FFFFFF
-set $text-unfocused     #282f39
+set $text-unfocused     #FFFFFF
 set $text-urgent        #FFFFFF
 set $text-placeholder   #FFFFFF
 set $text-background    #FFFFFF
@@ -56,6 +56,7 @@ floating_modifier $mod
 
 # Keybind to execute programs
 bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+bindsym $mod+Shift+Return exec --no-startup-id gvim
 bindsym $mod+w exec --no-startup-id firefox
 bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+Shift+d exec --no-startup-id rofi -show run

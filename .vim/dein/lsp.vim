@@ -4,17 +4,11 @@ let g:lsp_diagnostics_float_cursor = 1
 
 " Signs
 let g:lsp_diagnostics_signs_delay = 200
-let g:lsp_diagnostics_signs_error = { 'text': ' ' }
-let g:lsp_diagnostics_signs_warning = { 'text': ' ' }
-let g:lsp_diagnostics_signs_hint = { 'text': ' ' }
-let g:lsp_diagnostics_signs_information = { 'text': ' ' }
-
-" Highlights
-highlight link LspErrorHighlight ALEError
-highlight link LspWarningHighlight ALEWarning
-highlight link LspHintHighlight ALEWarning
-highlight link LspInformationHighlight ALEInfo
-
+let g:lsp_diagnostics_signs_error = { 'text': '' }
+let g:lsp_diagnostics_signs_warning = { 'text': '' }
+let g:lsp_diagnostics_signs_hint = { 'text': '' }
+let g:lsp_diagnostics_signs_information = { 'text': '' }
+let g:lsp_document_code_action_signs_hint = { 'text': '' }
 " Format on Save
 autocmd BufWritePre <buffer> LspDocumentFormatSync
 

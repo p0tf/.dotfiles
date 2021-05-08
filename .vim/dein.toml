@@ -38,15 +38,15 @@ repo = 'tpope/vim-surround'
 [[plugins]]
 repo = 'tpope/vim-repeat'
 
-[[plugins]]
-repo = 'markonm/traces.vim'
-hook_add = 'runtime dein/traces.vim'
-
-
 # Fuzzy Finder
 [[plugins]]
 repo = 'junegunn/fzf.vim'
 hook_add = 'runtime dein/fzf.vim'
+
+
+# Task Runner
+[[plugins]]
+repo = 'watcol/easyrun.vim'
 
 
 # External Integrations
@@ -56,7 +56,6 @@ repo = 'lambdalisue/gina.vim'
 [[plugins]]
 repo = 'airblade/vim-gitgutter'
 hook_add = 'runtime dein/gitgutter.vim'
-
 
 # Snippets
 [[plugins]]

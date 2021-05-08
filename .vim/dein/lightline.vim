@@ -82,7 +82,7 @@ function! FileName()
   if len(name) == 0
     return '[No Name]'
   else
-    return icon . ' ' . name
+    return icon . name
   endif
 endfunction
 
@@ -94,7 +94,7 @@ function! TabFileName(n)
   if len(name) == 0
     return '[No Name]'
   else
-    return icon . ' ' . name
+    return icon . name
   endif
 endfunction
 
@@ -127,7 +127,7 @@ function! TabModified(n)
 endfunction
 
 function! Git()
-  let symbol = ' '
+  let symbol = ''
   let branch = gina#component#repo#branch()
   if len(branch) == 0
     return symbol . '[None]'

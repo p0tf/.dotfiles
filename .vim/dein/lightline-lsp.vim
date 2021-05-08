@@ -1,4 +1,4 @@
-let g:lightline#lsp#ok_symbol = ' OK'
+let g:lightline#lsp#ok_symbol = 'OK'
 
 let g:lightline.component_expand = {
 \   'lsp-ok': 'lightline#lsp#ok',

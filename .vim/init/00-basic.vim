@@ -58,4 +58,21 @@ set clipboard^=unnamedplus
 
 " Terminal Config
 tnoremap <F1> <C-W>N
-autocmd TerminalOpen * set nonumber
+tnoremap <ScrollWheelDown> <C-W>N<ScrollWheelDown>
+tnoremap <ScrollWheelUp> <C-W>N<ScrollWheelUp>
+autocmd TerminalOpen * call s:term_start()
+
+function s:term_start()
+  setlocal nonumber
+  setlocal nolist
+  setlocal noexpandtab
+  setlocal noautoindent
+  setlocal nosmartindent
+endfunction
+
+" GUI
+if has('gui')
+  set guioptions=agci
+  set guicursor+=a:blinkon0
+  set guifont=Bitstream\ Vera\ Sans\ Mono\ 12
+endif
