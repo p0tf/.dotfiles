@@ -1,0 +1,308 @@
+{
+  "if": {
+    "prefix": "if",
+    "body": [
+      "if ${1:condition} {",
+      "    ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "iflet": {
+    "prefix": "ifl",
+    "body": [
+      "if let ${1:Some($2)} = ${3} {",
+      "    ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "elseif": {
+    "prefix": "ei",
+    "body": [
+      "else if ${1:condition} {",
+      "    ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "elseiflet": {
+    "prefix": "eil",
+    "body": [
+      "else if let ${1:Some($2)} = ${3:expr} {",
+      "    ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "else": {
+    "prefix": "el",
+    "body": [
+      "else {",
+      "    ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "match": {
+    "prefix": "mat",
+    "body": [
+      "match ${1:expr} {",
+      "    ${2:Some($3)} => ${4}"
+    ]
+  },
+  "arm": {
+    "prefix": "arm",
+    "body": [
+      "${1:_} => ${2}"
+    ]
+  },
+  "loop": {
+    "prefix": "loop",
+    "body": [
+      "loop {",
+      "    ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "while": {
+    "prefix": "wh",
+    "body": [
+      "while ${1:condition} {",
+      "    ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "whilelet": {
+    "prefix": "whl",
+    "body": [
+      "while let ${1:Some($2)} = ${3} {",
+      "    ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "for": {
+    "prefix": "for",
+    "body": [
+      "for ${1:i} in ${2} {",
+      "    ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "fn": {
+    "prefix": "fn",
+    "body": [
+      "fn ${1:name}(${2:${VIM:indent('.') ? '&self' : ''}}) {",
+      "    ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "pubfn": {
+    "prefix": "pfn",
+    "body": [
+      "pub fn ${1:name}(${2:${VIM:indent('.') ? '&self' : ''}}) {",
+      "    ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "main": {
+    "prefix": "main",
+    "body": [
+      "fn main() {",
+      "    ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "new": {
+    "prefix": "new",
+    "body": [
+      "pub fn new() -> ${1:Self} {",
+      "    ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "letmut": {
+    "prefix": "lm",
+    "body": [
+      "let mut "
+    ]
+  },
+  "externcrate": {
+    "prefix": "ec",
+    "body": [
+      "extern crate ${1:anyhow};",
+      ""
+    ]
+  },
+  "pubuse": {
+    "prefix": "pu",
+    "body": [
+      "pub use ${1};"
+    ]
+  },
+  "macro_use": {
+    "prefix": "mu",
+    "body": [
+      "#[macro_use]"
+    ]
+  },
+  "cfg": {
+    "prefix": "cfg",
+    "body": [
+      "#[cfg(${1:target_os = \"linux\"})]"
+    ]
+  },
+  "cfg-feature": {
+    "prefix": "cff",
+    "body": [
+      "#[cfg(feature = ${1})]"
+    ]
+  },
+  "derive": {
+    "prefix": "der",
+    "body": [
+      "#[derive(${1:Clone, Debug, PartialEq, Eq})]"
+    ]
+  },
+  "attr": {
+    "prefix": "attr",
+    "body": [
+      "#[${1:inline}]"
+    ]
+  },
+  "macro": {
+    "prefix": "macro",
+    "body": [
+      "macro_rules! ${1:name} {",
+      "    (${2}) => (",
+      "        ${3}",
+      "    )",
+      "}"
+    ]
+  },
+  "type": {
+    "prefix": "ty",
+    "body": [
+      "type ${1:Name} = $2;"
+    ]
+  },
+  "pubtype": {
+    "prefix": "pty",
+    "body": [
+      "pub type ${1:Name} = $2;"
+    ]
+  },
+  "struct": {
+    "prefix": "st",
+    "body": [
+      "struct ${1:${VIM:substitute(expand('%:r'), '\\(_\\|^\\)\\(.\\)', '\\u\\2', 'g')}} {",
+      "   ${0}",
+      "}"
+    ]
+  },
+  "pubstruct": {
+    "prefix": "pst",
+    "body": [
+      "pub struct ${1:${VIM:substitute(expand('%:r'), '\\(_\\|^\\)\\(.\\)', '\\u\\2', 'g')}} {",
+      "   ${0}",
+      "}"
+    ]
+  },
+  "structimpl": {
+    "prefix": "sti",
+    "body": [
+      "pub struct ${1:${VIM:substitute(expand('%:r'), '\\(_\\|^\\)\\(.\\)', '\\u\\2', 'g')}} {",
+      "   ${0}",
+      "}",
+      "",
+      "impl $1 {",
+      "    ${2}",
+      "}"
+    ]
+  },
+  "structtuple": {
+    "prefix": "stt",
+    "body": [
+      "struct ${1:${VIM:substitute(expand('%:r'), '\\(_\\|^\\)\\(.\\)', '\\u\\2', 'g')}}(${0});"
+    ]
+  },
+  "pubstructtuple": {
+    "prefix": "pstt",
+    "body": [
+      "pub struct ${1:${VIM:substitute(expand('%:r'), '\\(_\\|^\\)\\(.\\)', '\\u\\2', 'g')}}(${0});"
+    ]
+  },
+  "structtupleimpl": {
+    "prefix": "stti",
+    "body": [
+      "pub struct ${1:${VIM:substitute(expand('%:r'), '\\(_\\|^\\)\\(.\\)', '\\u\\2', 'g')}}(${0});",
+      "",
+      "impl $1 {",
+      "    ${2}",
+      "}"
+    ]
+  },
+  "enum": {
+    "prefix": "en",
+    "body": [
+      "enum ${1:${VIM:substitute(expand('%:r'), '\\(_\\|^\\)\\(.\\)', '\\u\\2', 'g')}} {",
+      "   ${0}",
+      "}"
+    ]
+  },
+  "pubenum": {
+    "prefix": "pen",
+    "body": [
+      "pub enum ${1:${VIM:substitute(expand('%:r'), '\\(_\\|^\\)\\(.\\)', '\\u\\2', 'g')}} {",
+      "   ${0}",
+      "}"
+    ]
+  },
+  "enumimpl": {
+    "prefix": "eni",
+    "body": [
+      "pub enum ${1:${VIM:substitute(expand('%:r'), '\\(_\\|^\\)\\(.\\)', '\\u\\2', 'g')}} {",
+      "   ${0}",
+      "}",
+      "",
+      "impl $1 {",
+      "    ${2}",
+      "}"
+    ]
+  },
+  "trait": {
+    "prefix": "tra",
+    "body": [
+      "trait ${1:${VIM:substitute(expand('%:r'), '\\(_\\|^\\)\\(.\\)', '\\u\\2', 'g')}} {",
+      "   ${0}",
+      "}"
+    ]
+  },
+  "pubtrait": {
+    "prefix": "ptra",
+    "body": [
+      "pub trait ${1:${VIM:substitute(expand('%:r'), '\\(_\\|^\\)\\(.\\)', '\\u\\2', 'g')}} {",
+      "   ${0}",
+      "}"
+    ]
+  },
+  "static-str": {
+    "prefix": "stats",
+    "body": [
+      "static ${1:name}: &'static str = \"${0}\";"
+    ]
+  },
+  "static": {
+    "prefix": "stat",
+    "body": [
+      "static ${1:name}: ${2:usize} = ${0};"
+    ]
+  },
+  "pubstatic-str": {
+    "prefix": "pstats",
+    "body": [
+      "pub static ${1:name}: &'static str = \"${0}\";"
+    ]
+  },
+  "pubstatic": {
+    "prefix": "pstat",
+    "body": [
+      "pub static ${1:name}: ${2:usize} = ${0};"
+    ]
+  }
+}

@@ -1,4 +1,0 @@
-#!/usr/bin/env fish
-cat > __stdin__
-nvim -c "terminal cat __stdin__"
-rm __stdin__

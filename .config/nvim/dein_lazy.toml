@@ -1,0 +1,24 @@
+[[plugins]]
+repo = 'cespare/vim-toml'
+on_ft = ['toml']
+overwrite = true
+
+[[plugins]]
+repo = 'wsdjeg/dein-ui.vim'
+on_cmd = ['DeinUpdate']
+overwrite = true
+
+[[plugins]]
+repo = 'tokorom/vim-review'
+on_ft = ['review']
+overwrite = true
+
+[[plugins]]
+repo = 'lambdalisue/suda.vim'
+on_cmd = ['SudaRead', 'SudaWrite']
+overwrite = true
+
+[[plugins]]
+repo = 'lambdalisue/vim-manpager'
+on_cmd = ['Man', 'MANPAGER']
+overwrite = true

@@ -1,0 +1,181 @@
+{
+  "main": {
+    "prefix": "main",
+    "body": [
+      "int main() {",
+      "  ${0}",
+      "  return 0;",
+      "}"
+    ]
+  },
+  "Main": {
+    "prefix": "Main",
+    "body": [
+      "int main(int argc, char *argv[]) {",
+      "  ${0}",
+      "  return 0;",
+      "}"
+    ]
+  },
+  "include": {
+    "prefix": "inc",
+    "body": [
+      "#include<${1:stdio}.h>"
+    ]
+  },
+  "Include": {
+    "prefix": "Inc",
+    "body": [
+      "#include\"${1:$TM_FILENAME_BASE}.h\""
+    ]
+  },
+  "define": {
+    "prefix": "def",
+    "body": [
+      "#define "
+    ]
+  },
+  "once": {
+    "prefix": "once",
+    "body": [
+      "#ifndef ${1:${VIM:toupper(expand('%:r'))}_H}",
+      "#define ${1}",
+      "",
+      "${0}",
+      "",
+      "#endif"
+    ]
+  },
+  "if": {
+    "prefix": "if",
+    "body": [
+      "if (${1:true}) {",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "else": {
+    "prefix": "el",
+    "body": [
+      "else {",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "elseif": {
+    "prefix": "ef",
+    "body": [
+      "else if (${1:true}) {",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "for": {
+    "prefix": "for",
+    "body": [
+      "for (int ${1:i} = 0; $1 < ${2:count}; $1${3:++}) {",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "For": {
+    "prefix": "For",
+    "body": [
+      "for (int ${1:i} = ${2:0}; ${3:$1 < 10}; $1${4:++}) {",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "while": {
+    "prefix": "wh",
+    "body": [
+      "while (${1:true}) {",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "}"
+    ]
+  },
+  "do": {
+    "prefix": "do",
+    "body": [
+      "do {",
+      "  ${0:$TM_SELECTED_TEXT}",
+      "} while (${1:true});"
+    ]
+  },
+  "return": {
+    "prefix": "ret",
+    "body": [
+      "return ${1:0};"
+    ]
+  },
+  "function": {
+    "prefix": "fn",
+    "body": [
+      "${1:void} ${2:name}(${3}) {",
+      "  ${0}",
+      "}"
+    ]
+  },
+  "functiondecl": {
+    "prefix": "fnd",
+    "body": [
+      "${1:void} ${2:name}(${3});"
+    ]
+  },
+  "typedef": {
+    "prefix": "td",
+    "body": [
+      "typedef ${1:int} ${2:YourType};"
+    ]
+  },
+  "struct": {
+    "prefix": "st",
+    "body": [
+      "struct ${1:${TM_FILENAME_BASE}_t} {",
+      "  ${0}",
+      "}"
+    ]
+  },
+  "defstruct": {
+    "prefix": "dst",
+    "body": [
+      "typedef struct {",
+      "  ${0}",
+      "} ${1:${TM_FILENAME_BASE}_t};"
+    ]
+  },
+  "enum": {
+    "prefix": "en",
+    "body": [
+      "enum ${1:name} {",
+      "  ${0}",
+      "}"
+    ]
+  },
+  "defenum": {
+    "prefix": "den",
+    "body": [
+      "typedef enum {",
+      "  ${0}",
+      "} ${1:name};"
+    ]
+  },
+  "print": {
+    "prefix": "pr",
+    "body": [
+      "printf(\"${1:%s}\\n\", ${2});"
+    ]
+  },
+  "fprint": {
+    "prefix": "fp",
+    "body": [
+      "fprintf(${1:stderr}, \"${2:%s}\\n\", ${3});"
+    ]
+  },
+  "printd": {
+    "prefix": "pd",
+    "body": [
+      "printf(\"${1:} = %d\\n\", $1);"
+    ]
+  }
+}

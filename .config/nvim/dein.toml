@@ -1,0 +1,75 @@
+[[plugins]]
+repo = 'Shougo/dein.vim'
+
+[[plugins]]
+repo = 'watcol/onelight.vim'
+hook_add = "lua require('plugins.onelight')"
+
+[[plugins]]
+repo = 'andymass/vim-matchup'
+hook_add = "lua require('plugins.matchup')"
+
+[[plugins]]
+repo = 'tyru/caw.vim'
+
+[[plugins]]
+repo = 'kana/vim-operator-user'
+
+[[plugins]]
+repo = 'rhysd/vim-operator-surround'
+depends = [ 'vim-operator-user' ]
+hook_add = "lua require('plugins.surround')"
+
+[[plugins]]
+repo = 'editorconfig/editorconfig-vim'
+
+[[plugins]]
+repo = 'cohama/lexima.vim'
+
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip'
+hook_add = "lua require('plugins.vsnip')"
+
+[[plugins]]
+repo = 'hrsh7th/vim-vsnip-integ'
+depends = [ 'vim-vsnip' ]
+
+[[plugins]]
+repo = 'neovim/nvim-lspconfig'
+hook_add = "lua require('plugins.lsp')"
+
+[[plugins]]
+repo = 'alexaandru/nvim-lspupdate'
+depends = [ 'nvim-lspconfig' ]
+
+[[plugins]]
+repo = 'glepnir/lspsaga.nvim'
+depends = [ 'nvim-lspconfig' ]
+hook_add = "lua require('plugins.lspsaga')"
+
+[[plugins]]
+repo = 'hrsh7th/nvim-compe'
+hook_add = "lua require('plugins.compe')"
+
+[[plugins]]
+repo = 'kyazdani42/nvim-web-devicons'
+
+[[plugins]]
+repo = 'glepnir/galaxyline.nvim'
+hook_add = "lua require('plugins.galaxyline')"
+
+[[plugins]]
+repo = 'nvim-lua/plenary.nvim'
+
+[[plugins]]
+repo = 'nvim-lua/popup.nvim'
+
+[[plugins]]
+repo = 'lewis6991/gitsigns.nvim'
+depends = [ 'plenary.nvim' ]
+hook_add = "lua require('plugins.gitsigns')"
+
+[[plugins]]
+repo = 'nvim-telescope/telescope.nvim'
+depends = [ 'plenary.nvim', 'popup.nvim' ]
+hook_add = "lua require('plugins.telescope')"

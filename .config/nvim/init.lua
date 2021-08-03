@@ -1,0 +1,6 @@
+require('options')
+require('keymaps')
+require('highlight-yank')
+require('ime')
+require('lsp')
+require('plugins')

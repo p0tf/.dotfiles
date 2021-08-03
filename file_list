@@ -1,11 +1,11 @@
 .config/alacritty.yml
-.config/fish
+.config/nvim
 .config/i3
 .config/picom.conf
 .config/rofi
 .config/xfce4
 .editorconfig
-.local/bin/vimpager
+.config/zsh
+.zshrc
+.local/bin/nvimpager
 .local/bin/i3lock-arc
-.vimrc
-.vim
