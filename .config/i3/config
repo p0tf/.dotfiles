@@ -36,9 +36,9 @@ bindsym $mod+Shift+r restart
 
 # Execute Jobs
 exec --no-startup-id xfce4-panel --disable-wm-check
+exec --no-startup-id fcitx5
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
-exec --no-startup-id ibus-daemon -dx
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 exec --no-startup-id xss-lock -- ~/.local/bin/i3lock-arc
 exec --no-startup-id picom
@@ -55,7 +55,7 @@ gaps outer 0
 floating_modifier $mod
 
 # Keybind to execute programs
-bindsym $mod+Return exec --no-startup-id i3-sensible-terminal
+bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+Shift+Return exec --no-startup-id gvim
 bindsym $mod+w exec --no-startup-id firefox
 bindsym $mod+d exec --no-startup-id rofi -show drun

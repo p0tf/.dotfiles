@@ -1,9 +1,12 @@
+let g:lsp_settings_filetype_rust = 'rust-analyzer'
 let g:lsp_settings = {
-\ 'rls': {
+\ 'rust-analyzer': {
 \   'workspace_config': {
-\     'rust': {
-\       'clippy_preference': 'on',
-\       'all-features': v:true
+\     'rust-analyzer': {
+\       'checkOnSave': {
+\         'allFeatures': v:true,
+\         'command': 'clippy',
+\       }
 \     }
 \   }
 \ }

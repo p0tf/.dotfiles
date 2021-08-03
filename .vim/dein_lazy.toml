@@ -7,10 +7,6 @@ repo = 'tokorom/vim-review'
 on_ft = ['review']
 
 [[plugins]]
-repo = 'haya14busa/dein-command.vim'
-on_cmd = ['Dein']
-
-[[plugins]]
 repo = 'lambdalisue/suda.vim'
 on_cmd = ['SudaRead', 'SudaWrite']
 

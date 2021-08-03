@@ -13,10 +13,10 @@ function! s:light()
   colorscheme onelight
 endfunction
 
-if 18 <= strftime("%H") && strftime("%H") < 22
+" if 18 <= strftime("%H") && strftime("%H") < 22
   let g:lightline.colorscheme = "onedark"
   Dark
-else
-  let g:lightline.colorscheme = "onelight"
-  Light
-endif
+" else
+"   let g:lightline.colorscheme = "onelight"
+"   Light
+" endif

@@ -2,6 +2,8 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
 
+[[plugins]]
+repo = 'wsdjeg/dein-ui.vim'
 
 # Colorschemes
 [[plugins]]
@@ -12,13 +14,17 @@ hook_add = 'runtime dein/onedark.vim'
 repo = 'watcol/onelight.vim'
 hook_add = 'runtime dein/onelight.vim'
 
+# Sailfish Syntax
+[[plugins]]
+repo = "Kogia-sima/sailfish"
+rtp = "syntax/vim"
 
 # File Read/Write Extensions
 [[plugins]]
 repo = "editorconfig/editorconfig-vim"
 
 [[plugins]]
-repo = 'watcol/edita.vim'
+repo = 'lambdalisue/edita.vim'
 
 
 # Editor Extensions
