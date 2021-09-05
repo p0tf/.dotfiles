@@ -3,11 +3,11 @@ repo = 'Shougo/dein.vim'
 
 [[plugins]]
 repo = 'watcol/onelight.vim'
-hook_add = "lua require('plugins.onelight')"
+hook_add = "runtime plugins/onelight.vim"
 
 [[plugins]]
 repo = 'andymass/vim-matchup'
-hook_add = "lua require('plugins.matchup')"
+hook_add = "runtime plugins/matchup.vim"
 
 [[plugins]]
 repo = 'tyru/caw.vim'
@@ -18,7 +18,7 @@ repo = 'kana/vim-operator-user'
 [[plugins]]
 repo = 'rhysd/vim-operator-surround'
 depends = [ 'vim-operator-user' ]
-hook_add = "lua require('plugins.surround')"
+hook_add = "runtime plugins/surround.lua"
 
 [[plugins]]
 repo = 'editorconfig/editorconfig-vim'
@@ -28,48 +28,67 @@ repo = 'cohama/lexima.vim'
 
 [[plugins]]
 repo = 'hrsh7th/vim-vsnip'
-hook_add = "lua require('plugins.vsnip')"
+hook_add = "runtime plugins/vsnip.vim"
 
 [[plugins]]
 repo = 'hrsh7th/vim-vsnip-integ'
-depends = [ 'vim-vsnip' ]
-
-[[plugins]]
-repo = 'neovim/nvim-lspconfig'
-hook_add = "lua require('plugins.lsp')"
-
-[[plugins]]
-repo = 'alexaandru/nvim-lspupdate'
-depends = [ 'nvim-lspconfig' ]
-
-[[plugins]]
-repo = 'glepnir/lspsaga.nvim'
-depends = [ 'nvim-lspconfig' ]
-hook_add = "lua require('plugins.lspsaga')"
-
-[[plugins]]
-repo = 'hrsh7th/nvim-compe'
-hook_add = "lua require('plugins.compe')"
+depends = [ 'vim-vsnip', 'ddc.vim' ]
 
 [[plugins]]
 repo = 'kyazdani42/nvim-web-devicons'
 
 [[plugins]]
 repo = 'glepnir/galaxyline.nvim'
-hook_add = "lua require('plugins.galaxyline')"
+hook_add = "runtime plugins/galaxyline.lua"
+
+[[plugins]]
+repo = 'akinsho/bufferline.nvim'
+hook_add = "runtime plugins/bufferline.lua"
 
 [[plugins]]
 repo = 'nvim-lua/plenary.nvim'
 
 [[plugins]]
-repo = 'nvim-lua/popup.nvim'
-
-[[plugins]]
 repo = 'lewis6991/gitsigns.nvim'
 depends = [ 'plenary.nvim' ]
-hook_add = "lua require('plugins.gitsigns')"
+hook_add = "runtime plugins/gitsigns.lua"
 
 [[plugins]]
-repo = 'nvim-telescope/telescope.nvim'
-depends = [ 'plenary.nvim', 'popup.nvim' ]
-hook_add = "lua require('plugins.telescope')"
+repo = 'prabirshrestha/vim-lsp'
+hook_add = "runtime plugins/lsp.vim"
+
+[[plugins]]
+repo = 'mattn/vim-lsp-settings'
+
+[[plugins]]
+repo = 'vim-denops/denops.vim'
+
+[[plugins]]
+repo = 'Shougo/ddc.vim'
+depends = [ 'denops.vim' ]
+hook_add = "runtime plugins/ddc.lua"
+
+[[plugins]]
+repo = 'Shougo/ddc-around'
+depends = [ 'ddc.vim' ]
+
+[[plugins]]
+repo = 'shun/ddc-vim-lsp'
+depends = [ 'ddc.vim' ]
+
+[[plugins]]
+repo = 'matsui54/ddc-matcher_fuzzy'
+depends = [ 'ddc.vim' ]
+
+[[plugins]]
+repo = 'Shougo/ddc-sorter_rank'
+depends = [ 'ddc.vim' ]
+
+[[plugins]]
+repo = 'kuuote/denops-skkeleton.vim'
+depends = [ 'denops.vim' ]
+hook_add = "runtime plugins/skkeleton.vim"
+
+[[plugins]]
+repo = 'lambdalisue/guise.vim'
+depends = [ 'denops.vim' ]

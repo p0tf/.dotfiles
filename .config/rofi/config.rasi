@@ -1,0 +1,11 @@
+/* vim: set ft=css : */
+configuration {
+  modi: "drun,window,run,system:~/.config/rofi/system.sh";
+  theme: "/usr/share/rofi/themes/Arc.rasi";
+  show-icons: true;
+  sidebar-mode: true;
+  terminal: "alacritty";
+  matching: "fuzzy";
+  kb-mode-previous: "Shift+Left,Super+h";
+  kb-mode-next: "Shift+Right,Super+l";
+}

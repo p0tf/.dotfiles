@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+if [ -e ~/.vimclip ]; then
+  rm ~/.vimclip
+fi
+
+if [ "$1" = "overwrite" ]; then
+  xclip -o -selection overwrite > ~/.vimclip
+fi
+
+if tty -s; then
+  nvim ~/.vimclip
+else
+  alacritty -e $HOME/.nvim_startup ~/.vimclip
+fi
+
+
+if [ -e ~/.vimclip ]; then
+  xclip -selection clipboard ~/.vimclip
+fi

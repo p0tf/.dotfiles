@@ -1,1 +1,4 @@
-/home/kanta/.dotfiles/.local/bin/vimpager
+#!/usr/bin/env sh
+cat > __stdin__
+nvim -c "setlocal nonu" -c "setlocal buftype=nofile" -c "term cat __stdin__"
+rm __stdin__

@@ -6,6 +6,7 @@ ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion)
 zinit light zdharma/fast-syntax-highlighting
 
 zinit light jeffreytse/zsh-vi-mode
+ZVM_VI_INSERT_ESCAPE_BINDKEY=jk
 
 zinit light woefe/git-prompt.zsh
 ZSH_THEME_GIT_PROMPT_PREFIX="("
@@ -26,16 +27,21 @@ zinit light olets/zsh-abbr
 
 # Aliases
 alias ls="ls --color=auto"
-alias vim="nvim"
-alias d="rm -I"
-alias m="mv -i"
-alias c="cp -i"
+alias diff="diff --color=auto"
+# alias vim="nvim"
+# alias d="rm -I"
+# alias m="mv -i"
+# alias c="cp -i"
 # alias abbr="abbrev-alias"
 
 # Variables
 export EDITOR="nvim"
+export MANPAGER="nvim -c MANPAGER -"
+# export PAGER="nvim -c 'set nonu' -c 'set buftype=nofile'"
+export PAGER="nvimpager"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.gem/ruby/3.0.0/bin"
+export PATH="$PATH:$HOME/.local/bin"
 
 # Prompts
 autoload -Uz colors

@@ -11,9 +11,25 @@ function main() {
     ['Lock']='loginctl lock-session'
   )
 
-  local -r IFS=$'\n'
+  local -Ar icons=(
+    ['Logout']='system-log-out'
+    ['Suspend']='system-suspend'
+    ['Hibernate']='system-hibernate'
+    ['Restart']='system-reboot'
+    ['Shutdown']='system-shutdown'
+    ['Lock']='system-lock-screen'
+  )
 
-  [[ $# -ne 0 ]] && eval "${menu[$1]}" || echo "${!menu[*]}"
+  if [[ $# -ne 0 ]]; then
+    coproc ( ${menu[$1]} > /dev/null 2>&1 )
+    exec 1>&-
+    exit 1
+  else
+    for item in "${!icons[@]}"; do
+      echo -en "${item}\0icon\x1f${icons[${item}]}\n"
+    done
+    exit 0
+  fi
 }
 
 main $@

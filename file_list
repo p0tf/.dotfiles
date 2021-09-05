@@ -9,3 +9,4 @@
 .zshrc
 .local/bin/nvimpager
 .local/bin/i3lock-arc
+.local/bin/vimclip

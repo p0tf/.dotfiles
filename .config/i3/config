@@ -36,7 +36,7 @@ bindsym $mod+Shift+r restart
 
 # Execute Jobs
 exec --no-startup-id xfce4-panel --disable-wm-check
-exec --no-startup-id fcitx5
+exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
 exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
@@ -58,6 +58,10 @@ floating_modifier $mod
 bindsym $mod+Return exec --no-startup-id alacritty
 bindsym $mod+Shift+Return exec --no-startup-id gvim
 bindsym $mod+w exec --no-startup-id firefox
+bindsym $mod+Shift+w exec --no-startup-id vivaldi
+bindsym $mod+Shift+p exec --no-startup-id rofi-rbw
+bindsym $mod+n exec --no-startup-id sh ~/.local/bin/vimclip
+bindsym $mod+Shift+n exec --no-startup-id sh ~/.local/bin/vimclip overwrite
 bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+Shift+d exec --no-startup-id rofi -show run
 
