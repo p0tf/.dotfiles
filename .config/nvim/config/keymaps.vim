@@ -15,8 +15,9 @@ xnoremap sy "+y
 xnoremap sd "+d
 
 " Windows
-call keymaputils#cmap('n', 'c', 'bwipeout')
-call keymaputils#cmap('n', 'x', 'write <Bar> :bwipeout')
+nnoremap <expr> <silent> <Leader>c len(filter(range(1, bufnr('$')), { _, val -> bufloaded(val) })) is# 1 ? ':<C-u>quit<CR>' : ':<C-u>bdelete<CR>'
+nnoremap <expr> <silent> <Leader>C len(filter(range(1, bufnr('$')), { _, val -> bufloaded(val) })) is# 1 ? ':<C-u>quit!<CR>' : ':<C-u>bdelete!<CR>'
+nnoremap <expr> <silent> <Leader>x len(filter(range(1, bufnr('$')), { _, val -> bufloaded(val) })) is# 1 ? ':<C-u>wq<CR>' : ':<C-u>write <Bar> :bdelete<CR>'
 call keymaputils#cmap('n', 's', 'new')
 call keymaputils#cmap('n', 'S', 'split')
 call keymaputils#cmap('n', 'v', 'vnew')
