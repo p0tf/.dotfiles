@@ -38,6 +38,10 @@ depends = [ 'vim-vsnip', 'ddc.vim' ]
 repo = 'kyazdani42/nvim-web-devicons'
 
 [[plugins]]
+repo = 'junegunn/fzf.vim'
+hook_add = 'runtime plugins/fzf.vim'
+
+[[plugins]]
 repo = 'glepnir/galaxyline.nvim'
 hook_add = "runtime plugins/galaxyline.lua"
 

@@ -6,13 +6,13 @@ let g:lsp_document_code_action_signs_enabled = 0
 
 
 function! s:lsp_start() abort
-  nmap <buffer> [d <Plug>(lsp-previous-diagnostic)
-  nmap <buffer> ]d <Plug>(lsp-next-diagnostic)
-  nmap <buffer> <Leader>a <Plug>(lsp-code-action)
-  nmap <buffer> <Leader>d <Plug>(lsp-hover)
-  nmap <buffer> <Leader>r <Plug>(lsp-rename)
-  nmap <buffer> <Leader>i <Plug>(lsp-peek-definition)
-  nmap <buffer> <Leader>f <Plug>(lsp-workspace-symbol-search)
+  call leadermap#bpsmap('d', 'lsp-previous-diagnostic', 'lsp-next-diagnostic')
+  call leadermap#bpmap('a', 'lsp-code-action')
+  call leadermap#bpmap('d', 'lsp-hover')
+  call leadermap#bpmap('r', 'lsp-rename')
+  call leadermap#bpmap('i', 'lsp-peek-definition')
+  call leadermap#bpmap('I', 'lsp-definition')
+  call leadermap#bpmap('fl', 'lsp-workspace-symbol-search')
   autocmd BufWritePre <buffer> LspDocumentFormatSync
 endfunction
 
