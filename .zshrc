@@ -9,6 +9,8 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd extendedglob nomatch notify
+setopt hist_ignore_all_dups hist_ignore_space hist_reduce_blanks
+zshaddhistory() { whence ${${(z)1}[1]} >| /dev/null || return 1 }
 unsetopt beep
 # End of lines configured by zsh-newuser-install
 ### Added by Zinit's installer
