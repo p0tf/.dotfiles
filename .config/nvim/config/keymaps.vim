@@ -18,6 +18,8 @@ xnoremap sd "+d
 nnoremap <expr> <silent> <Leader>c len(filter(range(1, bufnr('$')), { _, val -> bufloaded(val) })) is# 1 ? ':<C-u>quit<CR>' : ':<C-u>bdelete<CR>'
 nnoremap <expr> <silent> <Leader>C len(filter(range(1, bufnr('$')), { _, val -> bufloaded(val) })) is# 1 ? ':<C-u>quit!<CR>' : ':<C-u>bdelete!<CR>'
 nnoremap <expr> <silent> <Leader>x len(filter(range(1, bufnr('$')), { _, val -> bufloaded(val) })) is# 1 ? ':<C-u>wq<CR>' : ':<C-u>write <Bar> :bdelete<CR>'
+call leadermap#cmap('q', 'quit')
+call leadermap#cmap('Q', 'quit!')
 call leadermap#cmap('s', 'new')
 call leadermap#cmap('S', 'split')
 call leadermap#cmap('v', 'vnew')

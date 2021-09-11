@@ -2,8 +2,9 @@
 set number
 set list
 set listchars=tab:\|-,trail:.
-set termguicolors
+" set termguicolors
 set background=light
+colorscheme 16colors
 
 " Indents
 set expandtab
