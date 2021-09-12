@@ -16,8 +16,8 @@ set smartindent
 " Windows
 set splitright
 set splitbelow
-set pumblend=20
-set winblend=20
+" set pumblend=20
+" set winblend=20
 
 " Completion
 set completeopt=preview,noinsert
