@@ -141,6 +141,8 @@ call s:h('DiffRemoved', s:red,           '',      '')
 " Gitcommit highlights
 call s:h('gitcommitBranch',        s:purple,  '', '')
 call s:h('gitcommitHeader',        s:yellow,  '', '')
+call s:h('gitcommitSummary',       s:reset,   '', '')
+call s:h('gitcommitOverflow',      s:red,     '', '')
 call s:h('gitcommitUntrackedFile', s:cyan,    '', '')
 call s:h('gitcommitDiscardedFile', s:red,     '', '')
 call s:h('gitcommitSelectedFile',  s:green,   '', '')
@@ -155,9 +157,9 @@ hi link GitGutterChange SignifySignChange
 hi link GitGutterDelete SignifySignDelete
 
 " ALE
-call s:h('ALEError',   s:red,    '', 'underline')
-call s:h('ALEWarning', s:yellow, '', 'underline')
-call s:h('ALEInfo',    s:green,  '', 'underline')
+call s:h('ALEError',   s:red,           '', 'underline')
+call s:h('ALEWarning', s:bright_yellow, '', 'underline')
+call s:h('ALEInfo',    s:green,         '', 'underline')
 
 " vim-lsp
 call s:h('LspError',                  s:red,           '',        '')
