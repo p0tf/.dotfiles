@@ -4,62 +4,60 @@ font:
     style: Regular
   size: 7.5
 background_opacity: 0.95
-
-key_bindings:
-  - { key: Return,   mods: Shift,   chars: "✠" }
-  - { key: Return,   mods: Control,   chars: "✢" }
-
-# Nord
-colors: &dark
-   primary:
-     background: '#2E3440'
-     foreground: '#D8DEE9'
-
-   normal:
-     black:   '#3B4252'
-     red:     '#BF616A'
-     green:   '#A3BE8C'
-     yellow:  '#EBCB8B'
-     blue:    '#81A1C1'
-     magenta: '#B48EAD'
-     cyan:    '#88C0D0'
-     white:   '#E5E9F0'
-
-   bright:
-     black:   '#4C566A'
-     red:     '#BF616A'
-     green:   '#A3BE8C'
-     yellow:  '#EBCB8B'
-     blue:    '#81A1C1'
-     magenta: '#B48EAD'
-     cyan:    '#8FBCBB'
-     white:   '#ECEFF4'
-
+live_config_reload: true
 
 # One Light
-colors: &light
+colors:
   primary:
-    background: '0xfafafa'
-    foreground: '0x494b53'
+    background: '#FAFAFA'
+    foreground: '#494B53'
 
   normal:
-    black: '0x494b53'
-    red: '0xe45649'
-    green: '0x50a14f'
-    yellow: '0x986801'
-    blue: '0x4078f2'
-    magenta: '0xa626a4'
-    cyan: '0x0184bc'
-    white: '0xa0a1a7'
+    black: '#494B53'
+    red: '#E45649'
+    green: '#50A14F'
+    yellow: '#986801'
+    blue: '#4078F2'
+    magenta: '#A626A4'
+    cyan: '#0184BC'
+    white: '#A0A1A7'
 
   bright:
-    black: '0x696c77'
-    red: '0xca1243'
-    green: '0x50a14f'
-    yellow: '0xc18401'
-    blue: '0x4078f2'
-    magenta: '0xa626a4'
-    cyan: '0x0184bc'
-    white: '0xc2c2c3'
+    black: '#696C77'
+    red: '#CA1243'
+    green: '#50A14F'
+    yellow: '#C18401'
+    blue: '#4078f2'
+    magenta: '#A626A4'
+    cyan: '#0184BC'
+    white: '#C2C2C3'
 
-colors: *light
+  dim:
+    white: '#C2C2C3'
+
+# Nord
+# colors:
+#   primary:
+#     background: '#2E3440'
+#     foreground: '#D8DEE9'
+#   normal:
+#     black: '#3B4252'
+#     red: '#BF616A'
+#     green: '#A3BE8C'
+#     yellow: '#EBCB8B'
+#     blue: '#81A1C1'
+#     magenta: '#B48EAD'
+#     cyan: '#88C0D0'
+#     white: '#E5E9F0'
+#   bright:
+#     black: '#4C566A'
+#     red: '#BF616A'
+#     green: '#A3BE8C'
+#     yellow: '#EBCB8B'
+#     blue: '#81A1C1'
+#     magenta: '#B48EAD'
+#     cyan: '#8FBCBB'
+#     white: '#ECEFF4'
+#   dim:
+#     white: '#4C566A'
+#
