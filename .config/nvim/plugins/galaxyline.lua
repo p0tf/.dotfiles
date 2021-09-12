@@ -36,7 +36,7 @@ local colors = {
   green = 2,
   yellow = 3,
   blue = 4,
-  magenta = 5,
+  purple = 5,
   cyan = 6,
   white = 7,
 }
@@ -97,24 +97,19 @@ gls.left = {
         set_highlight('ViMode', mode_color[mode], '', 'bold,reverse')
         return '  ' .. alias[mode] .. ' '
       end,
-      highlight = {
-      }
+      highlight = {}
     },
   },
   {
-    TrailingSpace = {
-      provider = function() return '  ' end,
-      condition = cond.buffer_not_empty,
-      highlight = 'Pmenu',
-    }
-  },
-  {
     FileIcon = {
-      provider = 'FileIcon',
-      condition = function()
-        return cond.buffer_not_empty()
+      provider = function()
+        local icon = vim.fn["nerdfont#find"](vim.fn.expand('%:p'))
+        local color = require('icon_colors').get_color(icon)
+        set_highlight('FileIcon', color, bg_grey, '')
+        return '  ' .. icon .. ' '
       end,
-      highlight = 'Pmenu',
+      condition = cond.buffer_not_empty,
+      highlight = {},
     },
   },
   {
