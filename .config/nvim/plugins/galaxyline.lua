@@ -2,40 +2,63 @@ local gl = require('galaxyline')
 local gls = gl.section
 local cond = require('galaxyline.condition')
 
--- One Light
+-- -- One Light
+-- local colors = {
+--   dark_black = '#494b53',
+--   black = '#696c77',
+--   dark_grey = '#a0a1a7',
+--   grey = '#c2c2c3',
+--   cyan = '#0184bc',
+--   blue = '#4078f2',
+--   purple = '#a626a4',
+--   green = '#50a14f',
+--   dark_red = '#e45649',
+--   red = '#ca1243',
+--   dark_yellow = '#986801',
+--   yellow = '#c18401',
+--   bg_green = '#98c379',
+--   bg_purple = '#c678dd',
+--   bg_yellow = '#e5c07b',
+--   bg = '#fafafa',
+--   gutter = '#9e9e9e',
+--   cursor = '#f0f0f0',
+--   accent = '#526fff',
+--   accent2 = '#0083be',
+--   vertsplit = '#e7e9e1',
+--   special_grey = '#d3d3d3',
+--   visual_grey = '#d0d0d0',
+--   pmenu = '#dfdfdf',
+--   git = '#f14e32',
+-- }
 local colors = {
-  dark_black = '#494b53',
-  black = '#696c77',
-  dark_grey = '#a0a1a7',
-  grey = '#c2c2c3',
-  cyan = '#0184bc',
-  blue = '#4078f2',
-  purple = '#a626a4',
-  green = '#50a14f',
-  dark_red = '#e45649',
-  red = '#ca1243',
-  dark_yellow = '#986801',
-  yellow = '#c18401',
-  bg_green = '#98c379',
-  bg_purple = '#c678dd',
-  bg_yellow = '#e5c07b',
-  bg = '#fafafa',
-  gutter = '#9e9e9e',
-  cursor = '#f0f0f0',
-  accent = '#526fff',
-  accent2 = '#0083be',
-  vertsplit = '#e7e9e1',
-  special_grey = '#d3d3d3',
-  visual_grey = '#d0d0d0',
-  pmenu = '#dfdfdf',
-  git = '#f14e32',
+  black = 0,
+  red = 1,
+  green = 2,
+  yellow = 3,
+  blue = 4,
+  magenta = 5,
+  cyan = 6,
+  white = 7,
 }
 
+local bg_grey = 0
+if vim.o.background == "light" then
+  bg_grey = 15
+else
+  bg_grey = 0
+end
+
 local function set_highlight(group, fg, bg, kind)
-  if kind ~= '' then
-    kind = ' gui=' .. kind
+  if fg ~= '' then
+    fg = ' ctermfg=' .. fg
   end
-  vim.cmd('hi Galaxy' .. group .. ' guifg=' .. fg .. ' guibg=' .. bg .. kind)
+  if bg ~= '' then
+    bg = ' ctermbg=' .. bg
+  end
+  if kind ~= '' then
+    kind = ' cterm=' .. kind
+  end
+  vim.cmd('hi Galaxy' .. group .. fg .. bg .. kind)
 end
 
 gls.left = {
@@ -66,12 +89,12 @@ gls.left = {
           s      = colors.yellow,
           S      = colors.yellow,
           [''] = colors.yellow,
-          R      = colors.dark_red,
+          R      = colors.red,
           r      = colors.cyan,
           t      = colors.blue,
         }
         local mode = vim.fn.mode():sub(1, 1)
-        set_highlight('ViMode', colors.bg, mode_color[mode], 'bold')
+        set_highlight('ViMode', mode_color[mode], '', 'bold,reverse')
         return '  ' .. alias[mode] .. ' '
       end,
       highlight = {
@@ -82,7 +105,7 @@ gls.left = {
     TrailingSpace = {
       provider = function() return '  ' end,
       condition = cond.buffer_not_empty,
-      highlight = {colors.dark_black, colors.cursor},
+      highlight = 'Pmenu',
     }
   },
   {
@@ -91,7 +114,7 @@ gls.left = {
       condition = function()
         return cond.buffer_not_empty()
       end,
-      highlight = {require('galaxyline.provider_fileinfo').get_file_icon_color, colors.cursor},
+      highlight = 'Pmenu',
     },
   },
   {
@@ -108,40 +131,40 @@ gls.left = {
       condition = function()
         return cond.buffer_not_empty()
       end,
-      highlight = {colors.dark_black, colors.cursor},
+      highlight = 'Pmenu',
     }
   },
   {
     FileModified = {
       provider = function()
         if vim.bo.readonly and vim.bo.modified then
-          set_highlight('FileModified', colors.dark_red, colors.cursor, '')
+          set_highlight('FileModified', colors.red, bg_grey, '')
           return '  '
         elseif vim.bo.readonly then
-          set_highlight('FileModified', colors.blue, colors.cursor, '')
+          set_highlight('FileModified', colors.blue, bg_grey, '')
           return '  '
         elseif vim.bo.modified then
-          set_highlight('FileModified', colors.green, colors.cursor, '')
+          set_highlight('FileModified', colors.green, bg_grey, '')
           return '  '
         end
       end,
       condition = function()
         return cond.buffer_not_empty()
       end,
-      highlight = {colors.dark_black, colors.cursor},
+      highlight = {},
     }
   },
   {
     GitIcon = {
       provider = function() return '   ' end,
       condition = cond.check_git_workspace,
-      highlight = {colors.git, colors.bg},
+      highlight = 'DiffDelete',
     }
   },
   {
     GitBranch = {
       provider = 'GitBranch',
-      highlight = {colors.dark_black, colors.bg},
+      highlight = 'Normal',
     }
   },
   {
@@ -155,7 +178,7 @@ gls.left = {
       provider = 'DiffAdd',
       condition = cond.hide_in_width,
       icon = '  ',
-      highlight = {colors.green, colors.bg},
+      highlight = 'DiffAdd',
     }
   },
   {
@@ -163,7 +186,7 @@ gls.left = {
       provider = 'DiffModified',
       condition = cond.hide_in_width,
       icon = '  ',
-      highlight = {colors.yellow, colors.bg},
+      highlight = 'DiffChange',
     },
   },
   {
@@ -171,7 +194,7 @@ gls.left = {
       provider = 'DiffRemove',
       condition = cond.hide_in_width,
       icon = '  ',
-      highlight = {colors.dark_red, colors.bg},
+      highlight = 'DiffDelete',
     }
   },
 }
