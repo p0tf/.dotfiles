@@ -96,3 +96,7 @@ hook_add = "runtime plugins/skkeleton.vim"
 [[plugins]]
 repo = 'lambdalisue/guise.vim'
 depends = [ 'denops.vim' ]
+
+[[plugins]]
+repo = 'nvim-treesitter/nvim-treesitter'
+hook_post_update = 'TSUpdate'
