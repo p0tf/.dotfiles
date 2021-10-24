@@ -4,7 +4,6 @@ set list
 set listchars=tab:\|-,trail:.
 " set termguicolors
 set background=light
-colorscheme 16colors
 
 " Indents
 set expandtab
@@ -19,8 +18,9 @@ set splitbelow
 " set pumblend=20
 " set winblend=20
 
-" Completion
-set completeopt=preview,noinsert
+" Completes
+set completeopt+=noinsert
+set pumheight=15
 
 " Buffers
 set inccommand=split

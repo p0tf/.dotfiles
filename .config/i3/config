@@ -30,9 +30,16 @@ client.urgent           $border-urgent      $bg-urgent      $text-urgent      #C
 client.placeholder      $border-placeholder $bg-placeholder $text-placeholder #CC575D
 client.background       $border-background  $bg-background  $text-background  #CC575D
 
-# Reload
-bindsym $mod+Shift+c reload
-bindsym $mod+Shift+r restart
+# Borders
+default_border pixel 1
+default_floating_border normal
+
+# Gaps
+gaps inner 20
+gaps outer 0
+
+# No mouse focus
+focus_follows_mouse no
 
 # Execute Jobs
 exec --no-startup-id xfce4-panel --disable-wm-check
@@ -43,22 +50,13 @@ exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
 exec --no-startup-id xss-lock -- ~/.local/bin/i3lock-arc
 exec --no-startup-id picom
 
-# Borders
-default_border pixel 1
-default_floating_border normal
-
-# Gaps
-gaps inner 20
-gaps outer 0
-
-# Mouse+$mod to move floating windows.
-floating_modifier $mod
+# Reload
+bindsym $mod+Shift+c reload
+bindsym $mod+Shift+r restart
 
 # Keybind to execute programs
 bindsym $mod+Return exec --no-startup-id alacritty
-bindsym $mod+Shift+Return exec --no-startup-id gvim
-bindsym $mod+w exec --no-startup-id firefox
-bindsym $mod+Shift+w exec --no-startup-id vivaldi
+bindsym $mod+w exec --no-startup-id vivaldi-stable
 bindsym $mod+Shift+p exec --no-startup-id rofi-rbw
 bindsym $mod+n exec --no-startup-id sh ~/.local/bin/vimclip
 bindsym $mod+Shift+n exec --no-startup-id sh ~/.local/bin/vimclip overwrite
@@ -72,36 +70,6 @@ bindsym $mod+x exec --no-startup-id rofi -show system
 # Kill Applications
 bindsym $mod+q kill
 
-# Change focus
-bindsym $mod+h focus left
-bindsym $mod+j focus down
-bindsym $mod+k focus up
-bindsym $mod+l focus right
-
-# Move focused window
-bindsym $mod+Shift+h move left
-bindsym $mod+Shift+j move down
-bindsym $mod+Shift+k move up
-bindsym $mod+Shift+l move right
-
-# Enter fullscreen mode for the focused container
-bindsym $mod+f fullscreen toggle
-
-# Container controls
-bindsym $mod+Shift+s split toggle
-bindsym $mod+p focus parent
-bindsym $mod+c focus child
-
-# Change container layout
-bindsym $mod+Shift+t layout stacking
-bindsym $mod+t layout tabbed
-bindsym $mod+s layout toggle split
-
-# Floating window
-bindsym $mod+space focus mode_toggle
-bindsym $mod+Shift+space floating toggle
-bindsym $mod+Shift+f sticky toggle
-
 # Workspaces
 set $ws1 "1"
 set $ws2 "2"
@@ -114,7 +82,17 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws0 "0"
 
-# Switch workspace
+# Window
+bindsym $mod+h focus left
+bindsym $mod+j focus down
+bindsym $mod+k focus up
+bindsym $mod+l focus right
+bindsym $mod+Shift+h move left
+bindsym $mod+Shift+j move down
+bindsym $mod+Shift+k move up
+bindsym $mod+Shift+l move right
+
+# Workspace
 bindsym $mod+1 workspace number $ws1
 bindsym $mod+2 workspace number $ws2
 bindsym $mod+3 workspace number $ws3
@@ -125,9 +103,6 @@ bindsym $mod+7 workspace number $ws7
 bindsym $mod+8 workspace number $ws8
 bindsym $mod+9 workspace number $ws9
 bindsym $mod+0 workspace number $ws0
-bindsym $mod+minus scratchpad show; floating disable
-
-# Move container to workspace
 bindsym $mod+Shift+1 move container to workspace number $ws1
 bindsym $mod+Shift+2 move container to workspace number $ws2
 bindsym $mod+Shift+3 move container to workspace number $ws3
@@ -138,20 +113,92 @@ bindsym $mod+Shift+7 move container to workspace number $ws7
 bindsym $mod+Shift+8 move container to workspace number $ws8
 bindsym $mod+Shift+9 move container to workspace number $ws9
 bindsym $mod+Shift+0 move container to workspace number $ws0
-bindsym $mod+Shift+minus move scratchpad
 
-# Resize window
-bindsym $mod+r mode "resize"
-mode "resize" {
-        bindsym h resize shrink width 10 px or 1 ppt
-        bindsym j resize grow height 10 px or 1 ppt
-        bindsym k resize shrink height 10 px or 1 ppt
-        bindsym l resize grow width 10 px or 1 ppt
+# Layout
+bindsym $mod+t layout toggle tabbed split
+bindsym $mod+s layout toggle split
 
-        bindsym Return mode "default"
-        bindsym Escape mode "default"
-        bindsym $mod+r mode "default"
+# Tree editing
+bindsym $mod+p focus parent
+bindsym $mod+c focus child
+bindsym $mod+Shift+s split toggle
+
+# Fullscreen
+bindsym $mod+f fullscreen toggle
+
+# Floating
+bindsym $mod+space floating toggle
+bindsym $mod+Shift+space focus mode_toggle
+bindsym $mod+Ctrl+space sticky toggle
+
+# Resize
+bindsym $mod+Shift+period resize grow width 10 px or 1 ppt
+bindsym $mod+Shift+comma resize shrink width 10 px or 1 ppt
+bindsym $mod+Shift+equal resize grow height 10 px or 1 ppt
+bindsym $mod+minus resize shrink height 10 px or 1 ppt
+bindsym $mod+equal exec --no-startup-id i3_balance_workspace
+
+# Operation Mode
+bindsym $mod+semicolon mode "op"
+mode "op" {
+  # Kill
+  bindsym q kill
+
+  # Window
+  bindsym h focus left
+  bindsym j focus down
+  bindsym k focus up
+  bindsym l focus right
+  bindsym Shift+h move left
+  bindsym Shift+j move down
+  bindsym Shift+k move up
+  bindsym Shift+l move right
+
+  # Workspace
+  bindsym 1 workspace number $ws1
+  bindsym 2 workspace number $ws2
+  bindsym 3 workspace number $ws3
+  bindsym 4 workspace number $ws4
+  bindsym 5 workspace number $ws5
+  bindsym 6 workspace number $ws6
+  bindsym 7 workspace number $ws7
+  bindsym 8 workspace number $ws8
+  bindsym 9 workspace number $ws9
+  bindsym 0 workspace number $ws0
+  bindsym Shift+1 move container to workspace number $ws1
+  bindsym Shift+2 move container to workspace number $ws2
+  bindsym Shift+3 move container to workspace number $ws3
+  bindsym Shift+4 move container to workspace number $ws4
+  bindsym Shift+5 move container to workspace number $ws5
+  bindsym Shift+6 move container to workspace number $ws6
+  bindsym Shift+7 move container to workspace number $ws7
+  bindsym Shift+8 move container to workspace number $ws8
+  bindsym Shift+9 move container to workspace number $ws9
+  bindsym Shift+0 move container to workspace number $ws0
+
+  # Layout
+  bindsym t layout toggle tabbed split
+  bindsym s layout toggle split
+
+  # Tree editing
+  bindsym p focus parent
+  bindsym c focus child
+  bindsym Shift+s split toggle
+
+  # Fullscreen
+  bindsym f fullscreen toggle
+
+  # Floating
+  bindsym space floating toggle
+  bindsym Shift+space focus mode_toggle
+
+  # Resize
+  bindsym Shift+period resize grow width 10 px or 1 ppt
+  bindsym Shift+comma resize shrink width 10 px or 1 ppt
+  bindsym Shift+equal resize grow height 10 px or 1 ppt
+  bindsym minus resize shrink height 10 px or 1 ppt
+  bindsym equal exec --no-startup-id i3_balance_workspace
+
+  bindsym Escape mode "default"
+  bindsym semicolon mode "default"
 }
-
-# Application specific settings
-for_window [class="Oblogout"] fullscreen enable

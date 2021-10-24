@@ -41,6 +41,79 @@ local colors = {
   white = 7,
 }
 
+local icon_colors = {
+  [''] = 1,
+  [''] = 2,
+  [''] = 1,
+  [''] = 6,
+  [''] = 4,
+  [''] = 11,
+  [''] = 3,
+  [''] = 1,
+  [''] = 5,
+  [''] = 2,
+  [''] = 6,
+  [''] = 4,
+  [''] = 6,
+  [''] = 1,
+  [''] = 4,
+  [''] = 4,
+  [''] = 1,
+  [''] = 6,
+  [''] = 6,
+  [''] = 1,
+  [''] = 2,
+  [''] = 4,
+  [''] = 4,
+  [''] = 2,
+  [''] = 2,
+  [''] = 3,
+  [''] = 2,
+  [''] = 6,
+  [''] = 1,
+  [''] = 6,
+  [''] = 1,
+  [''] = 6,
+  [''] = 1,
+  [''] = 6,
+  [''] = 6,
+  [''] = 4,
+  [''] = 3,
+  [''] = 5,
+  [''] = 1,
+  [''] = 1,
+  [''] = 2,
+  [''] = 11,
+  [''] = 4,
+  [''] = 1,
+  [''] = 4,
+  [''] = 4,
+  [''] = 6,
+  [''] = 4,
+  [''] = 4,
+  ['ﳒ'] = 4,
+  ['鉶'] = 4,
+  [''] = 1,
+  [''] = 5,
+  [''] = 1,
+  [''] = 5,
+  [''] = 2,
+  [''] = 1,
+  [''] = 4,
+  [''] = 2,
+  ['﵂'] = 2,
+  [''] = 1,
+}
+
+local function get_icon_color(icon)
+  local color = icon_colors[icon]
+  if color == nil then
+    return ''
+  else
+    return color
+  end
+end
+
 local bg_grey = 0
 if vim.o.background == "light" then
   bg_grey = 15
@@ -104,7 +177,7 @@ gls.left = {
     FileIcon = {
       provider = function()
         local icon = vim.fn["nerdfont#find"](vim.fn.expand('%:p'))
-        local color = require('icon_colors').get_color(icon)
+        local color = get_icon_color(icon)
         set_highlight('FileIcon', color, bg_grey, '')
         return '  ' .. icon .. ' '
       end,

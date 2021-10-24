@@ -36,13 +36,14 @@ alias diff="diff --color=auto"
 
 # Variables
 export EDITOR="nvim"
-export MANPAGER="nvim -c MANPAGER -"
+export MANPAGER="nvim -c Man! -"
 # export PAGER="nvim -c 'set nonu' -c 'set buftype=nofile'"
 export PAGER="nvimpager"
 export BAT_THEME="OneHalfLight"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.gem/ruby/3.0.0/bin"
 export PATH="$PATH:$HOME/.local/bin"
+export PATH="$PATH:$HOME/.deno/bin"
 
 # Prompts
 autoload -Uz colors

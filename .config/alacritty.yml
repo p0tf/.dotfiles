@@ -2,7 +2,9 @@ font:
   normal:
     family: BitStream Vera Sans Mono
     style: Regular
-  size: 7.5
+  size: 8
+  offset:
+    y: -1
 background_opacity: 0.95
 live_config_reload: true
 
@@ -60,4 +62,3 @@ colors:
 #     white: '#ECEFF4'
 #   dim:
 #     white: '#4C566A'
-#
