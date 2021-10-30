@@ -6,8 +6,7 @@ local cond = require('galaxyline.condition')
 -- local colors = {
 --   dark_black = '#494b53',
 --   black = '#696c77',
---   dark_grey = '#a0a1a7',
---   grey = '#c2c2c3',
+--   dark_grey = '#a0a1a7', grey = '#c2c2c3',
 --   cyan = '#0184bc',
 --   blue = '#4078f2',
 --   purple = '#a626a4',

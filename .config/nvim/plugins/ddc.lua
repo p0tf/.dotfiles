@@ -7,7 +7,6 @@ vim.fn['ddc#custom#patch_global']('sources', {
   'skkeleton',
 })
 
-vim.fn['ddc#custom#patch_global']('keywordPattern', '[a-zA-Z_:]\\w*')
 vim.fn['ddc#custom#patch_global']('sourceOptions', {
   ['_'] = {
     matchers = {'matcher_fuzzy'},

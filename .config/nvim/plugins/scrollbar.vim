@@ -10,6 +10,7 @@ let g:scrollbar_highlight = {
 \ 'tail': 'Ignore',
 \ }
 
+let g:scrollbar_min_size = 1
 let g:scrollbar_right_offset = 0
 
 function! s:show_scrollbar()
