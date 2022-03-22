@@ -8,7 +8,6 @@ let g:lsp_diagnostics_signs_hint = {'text': ''}
 let g:lsp_diagnostics_virtual_text_enabled = 0
 let g:lsp_document_code_action_signs_enabled = 0
 
-
 function! s:lsp_start() abort
   call leadermap#bpsmap('d', 'lsp-previous-diagnostic', 'lsp-next-diagnostic')
   call leadermap#bpmap('a', 'lsp-code-action')

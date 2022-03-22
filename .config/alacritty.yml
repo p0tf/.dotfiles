@@ -5,60 +5,84 @@ font:
   size: 8
   offset:
     y: -1
-background_opacity: 0.95
+background_opacity: 1
 live_config_reload: true
 
-# One Light
-colors:
-  primary:
-    background: '#FAFAFA'
-    foreground: '#494B53'
+schemes:
+  # Edge Light
+  edge-light: &edge-light
+    primary:
+      background: '#FAFAFA'
+      foreground: '#4B505B'
 
-  normal:
-    black: '#494B53'
-    red: '#E45649'
-    green: '#50A14F'
-    yellow: '#986801'
-    blue: '#4078F2'
-    magenta: '#A626A4'
-    cyan: '#0184BC'
-    white: '#A0A1A7'
+    normal:
+      black: '#8790A0'
+      red: '#D05858'
+      green: '#608E32'
+      yellow: '#AB7105'
+      blue: '#5079BE'
+      magenta: '#B05CCC'
+      cyan: '#347A85'
+      white: '#EEF1F4'
 
-  bright:
-    black: '#696C77'
-    red: '#CA1243'
-    green: '#50A14F'
-    yellow: '#C18401'
-    blue: '#4078f2'
-    magenta: '#A626A4'
-    cyan: '#0184BC'
-    white: '#C2C2C3'
+    bright:
+      black: '#BCC5CF'
+      red: '#E17373'
+      green: '#76AF6F'
+      yellow: '#BE7E05'
+      blue: '#6996E0'
+      magenta: '#BF75D6'
+      cyan: '#4198A6'
+      white: '#FAFAFA'
 
-  dim:
-    white: '#C2C2C3'
+  # One Light
+  one-light: &one-light
+    primary:
+      background: '#FAFAFA'
+      foreground: '#494B53'
 
-# Nord
-# colors:
-#   primary:
-#     background: '#2E3440'
-#     foreground: '#D8DEE9'
-#   normal:
-#     black: '#3B4252'
-#     red: '#BF616A'
-#     green: '#A3BE8C'
-#     yellow: '#EBCB8B'
-#     blue: '#81A1C1'
-#     magenta: '#B48EAD'
-#     cyan: '#88C0D0'
-#     white: '#E5E9F0'
-#   bright:
-#     black: '#4C566A'
-#     red: '#BF616A'
-#     green: '#A3BE8C'
-#     yellow: '#EBCB8B'
-#     blue: '#81A1C1'
-#     magenta: '#B48EAD'
-#     cyan: '#8FBCBB'
-#     white: '#ECEFF4'
-#   dim:
-#     white: '#4C566A'
+    normal:
+      black: '#494B53'
+      red: '#E45649'
+      green: '#50A14F'
+      yellow: '#986801'
+      blue: '#4078F2'
+      magenta: '#A626A4'
+      cyan: '#0184BC'
+      white: '#A0A1A7'
+
+    bright:
+      black: '#696C77'
+      red: '#CA1243'
+      green: '#50A14F'
+      yellow: '#C18401'
+      blue: '#4078f2'
+      magenta: '#A626A4'
+      cyan: '#0184BC'
+      white: '#C2C2C3'
+
+  # Nord
+  nord: &nord
+    primary:
+      background: '#2E3440'
+      foreground: '#D8DEE9'
+    normal:
+      black: '#2E3440'
+      red: '#BF616A'
+      green: '#A3BE8C'
+      yellow: '#EBCB8B'
+      blue: '#81A1C1'
+      magenta: '#B48EAD'
+      cyan: '#88C0D0'
+      white: '#4C566A'
+    bright:
+      black: '#3B4252'
+      red: '#BF616A'
+      green: '#A3BE8C'
+      yellow: '#EBCB8B'
+      blue: '#81A1C1'
+      magenta: '#B48EAD'
+      cyan: '#8FBCBB'
+      white: '#616E88'
+
+colors: *edge-light

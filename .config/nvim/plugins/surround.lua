@@ -26,6 +26,6 @@ vim.g['operator#surround#blocks'] = {
   },
 }
 
-vim.api.nvim_set_keymap('n', 'sa', '<Plug>(operator-surround-append)', {silent=true})
-vim.api.nvim_set_keymap('n', 'su', '<Plug>(operator-surround-delete)', {silent=true})
-vim.api.nvim_set_keymap('n', 'sr', '<Plug>(operator-surround-replace)', {silent=true})
+vim.api.nvim_set_keymap('n', 'ys', '<Plug>(operator-surround-append)', {silent=true})
+vim.api.nvim_set_keymap('n', 'ds', '<Plug>(operator-surround-delete)', {silent=true})
+vim.api.nvim_set_keymap('n', 'cs', '<Plug>(operator-surround-replace)', {silent=true})

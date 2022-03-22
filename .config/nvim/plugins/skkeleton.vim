@@ -1,2 +1,2 @@
-imap <C-j> <Plug>(skkeleton-enable)
-cmap <C-j> <Plug>(skkeleton-enable)
+imap <C-s> <Plug>(skkeleton-enable)
+cmap <C-s> <Plug>(skkeleton-enable)

@@ -31,10 +31,12 @@ client.placeholder      $border-placeholder $bg-placeholder $text-placeholder #C
 client.background       $border-background  $bg-background  $text-background  #CC575D
 
 # Borders
-default_border pixel 1
-default_floating_border normal
+default_border pixel 0
+default_floating_border pixel 0
+floating_modifier $mod
 
 # Gaps
+smart_gaps inverse_outer
 gaps inner 20
 gaps outer 0
 
@@ -42,13 +44,13 @@ gaps outer 0
 focus_follows_mouse no
 
 # Execute Jobs
+exec --no-startup-id feh --bg-scale ~/Pictures/icecold.png
 exec --no-startup-id xfce4-panel --disable-wm-check
+exec --no-startup-id picom
+exec --no-startup-id xss-lock -- ~/.local/bin/i3lock-arc
 exec --no-startup-id kdeconnect-indicator
 exec --no-startup-id /usr/lib/xfce4/notifyd/xfce4-notifyd
 exec --no-startup-id /usr/lib/xfce-polkit/xfce-polkit
-exec --no-startup-id feh --bg-scale ~/Pictures/wallpaper.png
-exec --no-startup-id xss-lock -- ~/.local/bin/i3lock-arc
-exec --no-startup-id picom
 
 # Reload
 bindsym $mod+Shift+c reload
@@ -81,6 +83,11 @@ set $ws7 "7"
 set $ws8 "8"
 set $ws9 "9"
 set $ws0 "0"
+
+# For HDMI Screening
+# workspace $ws0 output HDMI2 VGA
+# exec --no-startup-id xrandr --output HDMI2 --auto --right-of eDP1
+# bindsym $mod+m exec --no-startup-id xrandr --output HDMI2 --auto --right-of eDP1
 
 # Window
 bindsym $mod+h focus left

@@ -1,11 +1,12 @@
-/* vim: set ft=css : */
 configuration {
   modi: "drun,window,run,system:~/.config/rofi/system.sh";
-  theme: "/usr/share/rofi/themes/Arc.rasi";
   show-icons: true;
   sidebar-mode: true;
   terminal: "alacritty";
+  font: "sans 13";
   matching: "fuzzy";
   kb-mode-previous: "Shift+Left,Super+h";
   kb-mode-next: "Shift+Right,Super+l";
 }
+
+@theme "~/.config/rofi/Iceberg.rasi"

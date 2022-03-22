@@ -11,12 +11,9 @@ repo = 'ayu-theme/ayu-vim'
 repo = 'mhartington/oceanic-next'
 [[plugins]]
 repo = 'sainnhe/edge'
+# hook_add = "colorscheme edge"
 [[plugins]]
 repo = 'romgrk/github-light.vim'
-
-[[plugins]]
-repo = 'watcol/palette.vim'
-hook_add = "runtime plugins/palette.vim"
 
 [[plugins]]
 repo = 'andymass/vim-matchup'
@@ -34,6 +31,13 @@ depends = ['vim-operator-user']
 hook_add = "runtime plugins/surround.lua"
 
 [[plugins]]
+repo = 'hrsh7th/vim-seak'
+hook_add = "runtime plugins/seak.vim"
+
+[[plugins]]
+repo = 'mattn/vim-molder'
+
+[[plugins]]
 repo = 'kwkarlwang/bufresize.nvim'
 hook_add = "runtime plugins/bufresize.lua"
 
@@ -42,6 +46,7 @@ repo = 'editorconfig/editorconfig-vim'
 
 [[plugins]]
 repo = 'cohama/lexima.vim'
+hook_add = "runtime plugins/lexima.vim"
 
 [[plugins]]
 repo = 'hrsh7th/vim-vsnip'
@@ -58,16 +63,16 @@ repo = 'lambdalisue/nerdfont.vim'
 repo = 'junegunn/fzf.vim'
 hook_add = 'runtime plugins/fzf.vim'
 
-[[plugins]]
-repo = 'glepnir/galaxyline.nvim'
-hook_add = "runtime plugins/galaxyline.lua"
+# [[plugins]]
+# repo = 'glepnir/galaxyline.nvim'
+# hook_add = "runtime plugins/galaxyline.lua"
+
+# [[plugins]]
+# repo = 'kyazdani42/nvim-web-devicons'
 
 [[plugins]]
-repo = 'kyazdani42/nvim-web-devicons'
-
-[[plugins]]
-repo = 'jose-elias-alvarez/buftabline.nvim'
-depends = ['nvim-web-devicons']
+repo = 'watcol/buftabline.nvim'
+# depends = ['nvim-web-devicons']
 hook_add = "runtime plugins/buftabline.lua"
 
 [[plugins]]
@@ -86,59 +91,77 @@ hook_add = "runtime plugins/scrollbar.vim"
 repo = 'phaazon/hop.nvim'
 hook_add = "runtime plugins/hop.lua"
 
-[[plugins]]
-repo = 'monaqa/dial.nvim'
-hook_add = "runtime plugins/dial.lua"
+# [[plugins]]
+# repo = 'prabirshrestha/vim-lsp'
+# hook_add = "runtime plugins/lsp.vim"
+# 
+# [[plugins]]
+# repo = 'mattn/vim-lsp-settings'
 
 [[plugins]]
-repo = 'prabirshrestha/vim-lsp'
-hook_add = "runtime plugins/lsp.vim"
+repo = 'ray-x/lsp_signature.nvim'
+depends = ['nvim-lspconfig']
+hook_add = 'runtime plugins/lsp_signature.lua'
 
 [[plugins]]
-repo = 'mattn/vim-lsp-settings'
+repo = 'neovim/nvim-lspconfig'
+
+[[plugins]]
+repo = 'williamboman/nvim-lsp-installer'
+depends = ['nvim-lspconfig', 'nvim-cmp']
+hook_add = "runtime plugins/nvim-lsp.lua"
+
+[[plugins]]
+repo = 'gfanto/fzf-lsp.nvim'
 
 [[plugins]]
 repo = 'vim-denops/denops.vim'
 
-[[plugins]]
-repo = 'Shougo/ddc.vim'
-depends = ['denops.vim']
-hook_add = "runtime plugins/ddc.lua"
+# [[plugins]]
+# repo = 'Shougo/ddc.vim'
+# depends = ['denops.vim']
+# hook_add = "runtime plugins/ddc.lua"
+# 
+# [[plugins]]
+# repo = 'Shougo/pum.vim'
+# 
+# [[multiple_plugins]]
+# plugins = [ 'ddc.vim', 'pum.vim', 'vim-vsnip', 'vim-vsnip-integ', 'lexima.vim' ]
+# hook_add = "runtime plugins/ddc-pum.vim"
+# 
+# [[plugins]]
+# repo = 'Shougo/neco-vim'
+# depends = ['ddc.vim']
+# 
+# [[plugins]]
+# repo = 'Shougo/ddc-cmdline-history'
+# depends = ['ddc.vim']
+# 
+# [[plugins]]
+# repo = 'LumaKernel/ddc-file'
+# depends = ['ddc.vim']
+# 
+# [[plugins]]
+# repo = 'LumaKernel/ddc-registers-words'
+# depends = ['ddc.vim']
+# 
+# [[plugins]]
+# repo = 'gamoutatsumi/ddc-emoji'
+# depends = ['ddc.vim']
+# 
+# [[plugins]]
+# repo = 'shun/ddc-vim-lsp'
+# depends = ['ddc.vim']
+# 
+# [[plugins]]
+# repo = 'Shougo/ddc-nvim-lsp'
+
+# [[plugins]]
+# repo = 'tani/ddc-fuzzy'
+# depends = ['ddc.vim']
 
 [[plugins]]
-repo = 'Shougo/pum.vim'
-
-[[multiple_plugins]]
-plugins = [ 'ddc.vim', 'pum.vim', 'vim-vsnip', 'lexima.vim' ]
-hook_add = "runtime plugins/ddc-pum.vim"
-
-[[plugins]]
-repo = 'Shougo/neco-vim'
-depends = ['ddc.vim']
-
-[[plugins]]
-repo = 'Shougo/ddc-cmdline-history'
-depends = ['ddc.vim']
-
-[[plugins]]
-repo = 'LumaKernel/ddc-file'
-depends = ['ddc.vim']
-
-[[plugins]]
-repo = 'LumaKernel/ddc-registers-words'
-depends = ['ddc.vim']
-
-[[plugins]]
-repo = 'gamoutatsumi/ddc-emoji'
-depends = ['ddc.vim']
-
-[[plugins]]
-repo = 'shun/ddc-vim-lsp'
-depends = ['ddc.vim']
-
-[[plugins]]
-repo = 'tani/ddc-fuzzy'
-depends = ['ddc.vim']
+repo = 'matsui54/denops-popup-preview.vim'
 
 [[plugins]]
 repo = 'vim-skk/skkeleton'
@@ -146,9 +169,41 @@ depends = ['denops.vim']
 hook_add = "runtime plugins/skkeleton.vim"
 
 [[plugins]]
+repo = 'delphinus/skkeleton_indicator.nvim'
+depends = ['skkeleton']
+hook_add = 'runtime plugins/skkeleton-indicator.lua'
+
+[[plugins]]
+repo = 'monaqa/dps-dial.vim'
+depends = ['denops.vim']
+hook_add = 'runtime plugins/dial.vim'
+
+[[plugins]]
 repo = 'lambdalisue/guise.vim'
 depends = ['denops.vim']
 
 [[plugins]]
 repo = 'nvim-treesitter/nvim-treesitter'
+hook_post_source = 'runtime plugins/treesitter.lua'
 hook_post_update = 'TSUpdate'
+
+[[plugins]]
+repo = 'hrsh7th/cmp-nvim-lsp'
+
+[[plugins]]
+repo = 'hrsh7th/cmp-buffer'
+
+[[plugins]]
+repo = 'hrsh7th/cmp-path'
+
+[[plugins]]
+repo = 'hrsh7th/cmp-cmdline'
+
+[[plugins]]
+repo = 'hrsh7th/cmp-vsnip'
+depends = ['vim-vsnip']
+
+[[plugins]]
+repo = 'hrsh7th/nvim-cmp'
+depends = ['cmp-nvim-lsp', 'cmp-buffer', 'cmp-path', 'cmp-vsnip', 'cmp-cmdline', 'vim-vsnip', 'lexima.vim']
+hook_add = 'runtime plugins/cmp.lua'

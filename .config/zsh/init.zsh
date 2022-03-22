@@ -1,6 +1,11 @@
 # Plugins
 zinit light zsh-users/zsh-autosuggestions
-ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=white,dim"
+if [ "$BACKGROUND" = 'light' ]; then
+  ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=0"
+else
+  ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE="fg=15"
+fi
+
 ZSH_AUTOSUGGEST_STRATEGY=(match_prev_cmd completion)
 
 zinit light zdharma-continuum/fast-syntax-highlighting
@@ -28,6 +33,7 @@ zinit light olets/zsh-abbr
 # Aliases
 alias ls="ls --color=auto"
 alias diff="diff --color=auto"
+alias chtheme="source $HOME/.local/bin/chtheme"
 # alias vim="nvim"
 # alias d="rm -I"
 # alias m="mv -i"
@@ -39,7 +45,7 @@ export EDITOR="nvim"
 export MANPAGER="nvim -c Man! -"
 # export PAGER="nvim -c 'set nonu' -c 'set buftype=nofile'"
 export PAGER="nvimpager"
-export BAT_THEME="OneHalfLight"
+export BAT_THEME="ansi"
 export PATH="$PATH:$HOME/.cargo/bin"
 export PATH="$PATH:$HOME/.gem/ruby/3.0.0/bin"
 export PATH="$PATH:$HOME/.local/bin"
@@ -56,3 +62,6 @@ fi
 PROMPT+='%F{blue}%B%~%b%f '
 PROMPT+='$(gitprompt)'
 PROMPT+='%(?.%F{green}.%F{red})%B%(!.#.$)%b%f '
+
+# Terminal
+stty -ixon

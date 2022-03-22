@@ -33,7 +33,7 @@ local colors = {
   black = 0,
   red = 1,
   green = 2,
-  yellow = 3,
+  yellow = 11,
   blue = 4,
   purple = 5,
   cyan = 6,
@@ -107,17 +107,10 @@ local icon_colors = {
 local function get_icon_color(icon)
   local color = icon_colors[icon]
   if color == nil then
-    return ''
+    return 'NONE'
   else
     return color
   end
-end
-
-local bg_grey = 0
-if vim.o.background == "light" then
-  bg_grey = 15
-else
-  bg_grey = 0
 end
 
 local function set_highlight(group, fg, bg, kind)
@@ -148,13 +141,14 @@ gls.left = {
           S      = 'SLINE',
           [''] = 'SBLOCK',
           R      = 'REP',
+          r      = 'Hit Enter',
           t      = 'TER',
         }
 
         local mode_color = {
           n      = colors.green,
           i      = colors.blue,
-          c      = colors.green,
+          c      = colors.yellow,
           v      = colors.purple,
           V      = colors.purple,
           [''] = colors.purple,
@@ -166,18 +160,25 @@ gls.left = {
           t      = colors.blue,
         }
         local mode = vim.fn.mode():sub(1, 1)
-        set_highlight('ViMode', mode_color[mode], '', 'bold,reverse')
+        set_highlight('ViMode', mode_color[mode], '', '')
         return '  ' .. alias[mode] .. ' '
       end,
       highlight = {}
     },
   },
   {
+    Separator1 = {
+      provider = function() return '/' end,
+      condition = cond.buffer_not_empty,
+      highlight = 'Whitespace',
+    }
+  },
+  {
     FileIcon = {
       provider = function()
         local icon = vim.fn["nerdfont#find"](vim.fn.expand('%:p'))
         local color = get_icon_color(icon)
-        set_highlight('FileIcon', color, bg_grey, '')
+        set_highlight('FileIcon', color, '', '')
         return '  ' .. icon .. ' '
       end,
       condition = cond.buffer_not_empty,
@@ -198,20 +199,20 @@ gls.left = {
       condition = function()
         return cond.buffer_not_empty()
       end,
-      highlight = 'Pmenu',
+      highlight = 'Normal',
     }
   },
   {
     FileModified = {
       provider = function()
         if vim.bo.readonly and vim.bo.modified then
-          set_highlight('FileModified', colors.red, bg_grey, '')
+          set_highlight('FileModified', colors.red, '', '')
           return '  '
         elseif vim.bo.readonly then
-          set_highlight('FileModified', colors.blue, bg_grey, '')
+          set_highlight('FileModified', colors.blue, '', '')
           return '  '
         elseif vim.bo.modified then
-          set_highlight('FileModified', colors.green, bg_grey, '')
+          set_highlight('FileModified', colors.green, '', '')
           return '  '
         end
       end,
@@ -222,8 +223,15 @@ gls.left = {
     }
   },
   {
+    Separator2 = {
+      provider = function() return ' / ' end,
+      condition = cond.check_git_workspace,
+      highlight = 'Whitespace',
+    }
+  },
+  {
     GitIcon = {
-      provider = function() return '   ' end,
+      provider = function() return '  ' end,
       condition = cond.check_git_workspace,
       highlight = 'DiffDelete',
     }
@@ -235,9 +243,12 @@ gls.left = {
     }
   },
   {
-    Separator = {
-      provider = function() return '   ' end,
-      highlight = 'Normal',
+    Separator3 = {
+      provider = function() return '  ' end,
+      condition = function()
+        return cond.check_git_workspace() and cond.hide_in_width()
+      end,
+      highlight = 'Whitespace',
     }
   },
   {
@@ -271,7 +282,7 @@ gls.right = {
       provider = function() return vim.fn["lsp#get_buffer_diagnostics_counts"]().error .. ' ' end,
       condition = function() return vim.fn["lsp#get_buffer_diagnostics_counts"]().error ~= 0 end,
       icon = '   ',
-      highlight = 'LspDiagnosticsSignError',
+      highlight = 'LspError',
     }
   },
   {
@@ -279,7 +290,7 @@ gls.right = {
       provider = function() return vim.fn["lsp#get_buffer_diagnostics_counts"]().warning .. ' ' end,
       condition = function() return vim.fn["lsp#get_buffer_diagnostics_counts"]().warning ~= 0 end,
       icon = '   ',
-      highlight = 'LspDiagnosticsSignWarning',
+      highlight = 'LspWarning',
     }
   },
   {
@@ -287,7 +298,7 @@ gls.right = {
       provider = function() return vim.fn["lsp#get_buffer_diagnostics_counts"]().information .. ' ' end,
       condition = function() return vim.fn["lsp#get_buffer_diagnostics_counts"]().information ~= 0 end,
       icon = '   ',
-      highlight = 'LspDiagnosticsSignInformation',
+      highlight = 'LspInformation',
     }
   },
   {
@@ -295,7 +306,17 @@ gls.right = {
       provider = function() return vim.fn["lsp#get_buffer_diagnostics_counts"]().hint .. ' ' end,
       condition = function() return vim.fn["lsp#get_buffer_diagnostics_counts"]().hint ~= 0 end,
       icon = '   ',
-      highlight = 'LspDiagnosticsSignHint',
+      highlight = 'LspHint',
+    }
+  },
+  {
+    Separator4 = {
+      provider = function() return ' /' end,
+      condition = function()
+        local counts = vim.fn["lsp#get_buffer_diagnostics_counts"]()
+        return (counts.error + counts.warning + counts.information + counts.hint) ~= 0
+      end,
+      highlight = 'Whitespace',
     }
   },
   {
@@ -306,7 +327,7 @@ gls.right = {
         local total = vim.fn.line('$')
         return string.format("  %d:%d(%d%%) ", line, col, math.floor((line/total)*100+0.5))
       end,
-      highlight = 'GalaxyViMode',
+      highlight = 'Normal',
     }
   },
 }

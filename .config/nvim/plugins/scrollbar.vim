@@ -5,9 +5,9 @@ let g:scrollbar_shape = {
 \ }
 
 let g:scrollbar_highlight = {
-\ 'head': 'Ignore',
-\ 'body': 'Ignore',
-\ 'tail': 'Ignore',
+\ 'head': 'Whitespace',
+\ 'body': 'Whitespace',
+\ 'tail': 'Whitespace',
 \ }
 
 let g:scrollbar_min_size = 1
@@ -27,7 +27,7 @@ endfunction
 
 augroup ScrollbarInit
   autocmd!
-  autocmd WinEnter,CursorMoved,CursorMovedI       * silent! call s:show_scrollbar()
-  autocmd VimResized,FocusGained,QuitPre          * silent! call s:show_scrollbar()
-  autocmd WinLeave,BufLeave,BufWinLeave,FocusLost * silent! call s:clear_scrollbar(0)
+  autocmd WinScrolled              * silent! call s:show_scrollbar()
+  autocmd BufLeave,BufWinLeave     * silent! call s:clear_scrollbar(0)
+  autocmd WinLeave,FocusLost       * silent! call s:clear_scrollbar(0)
 augroup end

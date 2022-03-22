@@ -1,11 +1,44 @@
 let mapleader=','
+nnoremap <Leader>; :
 
 " Exit
 inoremap jk <Esc>
+inoremap <C-a> <Esc>
 
 " Remove Search Highlight
 nnoremap <silent> <Esc> :<C-u>nohlsearch<CR>
 
+" Swap j and gj
+nnoremap j gj
+nnoremap k gk
+nnoremap gj j
+nnoremap gk k
+
+" map $ to ;
+" swap 0 and ^
+nnoremap ; $
+nnoremap 0 ^
+nnoremap ^ 0
+
+" Macros
+nnoremap <expr> q reg_recording() == 'q' ? 'q' : 'qq'
+nnoremap @ @q
+
+" Move cursor in insert mode.
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+
+" Disable PageDown/PageUp
+nnoremap <PageDown> <Nop>
+nnoremap <PageUp> <Nop>
+inoremap <PageDown> <Nop>
+inoremap <PageUp> <Nop>
+cnoremap <PageDown> <Nop>
+cnoremap <PageUp> <Nop>
+xnoremap <PageDown> <Nop>
+xnoremap <PageUp> <Nop>
 
 " Clipboard
 nnoremap sp "+p
@@ -15,9 +48,6 @@ xnoremap sy "+y
 xnoremap sd "+d
 
 " Windows
-nnoremap <expr> <silent> <Leader>c len(filter(range(1, bufnr('$')), { _, val -> bufloaded(val) })) is# 1 ? ':<C-u>quit<CR>' : ':<C-u>bdelete<CR>'
-nnoremap <expr> <silent> <Leader>C len(filter(range(1, bufnr('$')), { _, val -> bufloaded(val) })) is# 1 ? ':<C-u>quit!<CR>' : ':<C-u>bdelete!<CR>'
-nnoremap <expr> <silent> <Leader>x len(filter(range(1, bufnr('$')), { _, val -> bufloaded(val) })) is# 1 ? ':<C-u>wq<CR>' : ':<C-u>write <Bar> :bdelete<CR>'
 call leadermap#cmap('z', 'write')
 call leadermap#cmap('Z', 'write')
 call leadermap#cmap('q', 'quit')
@@ -37,5 +67,5 @@ call leadermap#map('L', '<C-w>L')
 call leadermap#map('=', '<C-w>=')
 call leadermap#map('<C-h>', '<C-w><')
 call leadermap#map('<C-l>', '<C-w>>')
-call leadermap#map('<C-l>', '<C-w>+')
-call leadermap#map('<C-l>', '<C-w>-')
+call leadermap#map('<C-j>', '<C-w>+')
+call leadermap#map('<C-k>', '<C-w>-')

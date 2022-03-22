@@ -11,6 +11,7 @@ function! s:puminit()
   inoremap <silent><expr> <CR> pum#visible() ? '<Cmd>call pum#map#confirm()<CR>' : lexima#expand('<LT>CR>', 'i')
   imap <silent><expr> <Esc> pum#visible() ? '<Cmd>call pum#map#cancel()<CR>' : '<Plug>(lexima-escape)'
   nnoremap : <Cmd>call CommandlinePre()<CR>:
+  autocmd User PumCompleteDone call vsnip_integ#on_complete_done(g:pum#completed_item)
 endfunction
 
 function! CommandlinePre() abort

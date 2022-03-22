@@ -14,3 +14,17 @@ on_cmd = ['SudaRead', 'SudaWrite']
 repo = "kat0h/bufpreview.vim"
 on_ft = ['markdown']
 depends = ['denops.vim']
+
+[[plugins]]
+repo = 'lervag/vimtex'
+on_ft = ['tex']
+
+[[plugins]]
+repo = 'mhinz/vim-sayonara'
+on_cmd = ['Sayonara', 'Sayonara!']
+hook_add = "runtime plugins/sayonara.vim"
+
+[[plugins]]
+repo = 'p00f/godbolt.nvim'
+on_cmd = ['Godbolt', 'GodboltCompiler']
+hook_post_source = 'runtime plugins/godbolt.lua'

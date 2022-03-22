@@ -1,5 +1,6 @@
 vim.fn['ddc#custom#patch_global']('sources', {
-  'vim-lsp',
+  -- 'vim-lsp',
+  'nvim-lsp',
   'file',
   'vsnip',
   'registers-words',
@@ -16,7 +17,7 @@ vim.fn['ddc#custom#patch_global']('sourceOptions', {
   ['registers-words'] = {
     mark = 'reg',
   },
-  ['ddc-vim-lsp'] = {
+  ['nvim-lsp'] = {
     mark = 'lsp',
     forceCompletionPattern = '\\.|:|->',
   },
@@ -49,3 +50,4 @@ vim.fn['ddc#custom#patch_global']('filterParams', {
 })
 
 vim.fn['ddc#enable']()
+vim.fn['popup_preview#enable']()

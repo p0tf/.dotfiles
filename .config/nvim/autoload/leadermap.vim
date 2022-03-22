@@ -3,7 +3,7 @@ function! leadermap#map(key, cmd)
 endfunction
 
 function! leadermap#cmap(key, cmd)
-  execute('nnoremap <silent> <Leader>' . a:key . ' :<C-u>' . a:cmd . '<CR>')
+  execute('nnoremap <silent> <Leader>' . a:key . ' <Cmd>' . a:cmd . '<CR>')
 endfunction
 
 function! leadermap#pmap(key, cmd)
@@ -15,7 +15,7 @@ function! leadermap#bmap(key, cmd)
 endfunction
 
 function! leadermap#bcmap(key, cmd)
-  execute('nnoremap <buffer> <silent> <Leader>' . a:key . ' :<C-u>' . a:cmd . '<CR>')
+  execute('nnoremap <buffer> <silent> <Leader>' . a:key . ' <Cmd>' . a:cmd . '<CR>')
 endfunction
 
 function! leadermap#bpmap(key, cmd)
@@ -28,8 +28,8 @@ function! leadermap#smap(key, cmd1, cmd2)
 endfunction
 
 function! leadermap#csmap(key, cmd1, cmd2)
-  execute('nnoremap <silent> [' . a:key . ' :<C-u>' . a:cmd1 . '<CR>')
-  execute('nnoremap <silent> ]' . a:key . ' :<C-u>' . a:cmd2 . '<CR>')
+  execute('nnoremap <silent> [' . a:key . ' <Cmd>' . a:cmd1 . '<CR>')
+  execute('nnoremap <silent> ]' . a:key . ' <Cmd>' . a:cmd2 . '<CR>')
 endfunction
 
 function! leadermap#psmap(key, cmd1, cmd2)
@@ -43,8 +43,8 @@ function! leadermap#bsmap(key, cmd)
 endfunction
 
 function! leadermap#bcsmap(key, cmd1, cmd2)
-  execute('nnoremap <buffer> <silent> [' . a:key . ' :<C-u>' . a:cmd1 . '<CR>')
-  execute('nnoremap <buffer> <silent> ]' . a:key . ' :<C-u>' . a:cmd2 . '<CR>')
+  execute('nnoremap <buffer> <silent> [' . a:key . ' <Cmd>' . a:cmd1 . '<CR>')
+  execute('nnoremap <buffer> <silent> ]' . a:key . ' <Cmd>' . a:cmd2 . '<CR>')
 endfunction
 
 function! leadermap#bpsmap(key, cmd1, cmd2)
