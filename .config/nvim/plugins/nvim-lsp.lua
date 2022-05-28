@@ -65,13 +65,13 @@ require('nvim-lsp-installer').on_server_ready(function(server)
           importEnforceGranularity = true,
         },
         cargo = {
-          features={"alloc"},
-          noDefaultFeatures = true,
+          -- features={"alloc"},
+          -- noDefaultFeatures = true,
         },
         checkOnSave = {
           command = "clippy",
-          features={"alloc"},
-          noDefaultFeatures = true,
+          -- features={"alloc"},
+          -- noDefaultFeatures = true,
         },
       }
     },

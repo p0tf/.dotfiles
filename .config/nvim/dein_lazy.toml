@@ -7,6 +7,10 @@ repo = 'tokorom/vim-review'
 on_ft = ['review']
 
 [[plugins]]
+repo = 'gutenye/json5.vim'
+on_ft = ['json5']
+
+[[plugins]]
 repo = 'lambdalisue/suda.vim'
 on_cmd = ['SudaRead', 'SudaWrite']
 
