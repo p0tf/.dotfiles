@@ -4,18 +4,18 @@ set $mod Mod4
 font pango:Noto Sans 11
 
 # Set the border color
-set $border-focused     #5294E2
-set $border-focusedi    #D1D3D8
-set $border-unfocused   #LA2227
-set $border-urgent      #CC575D
+set $border-focused     #79740E
+set $border-focusedi    #79740E
+set $border-unfocused   #514036
+set $border-urgent      #AF2528
 set $border-placeholder #00FF00
-set $border-background  #282f39
-set $bg-focused         #5294E2
-set $bg-focusedi        #D1D3D8
-set $bg-unfocused       #LA2227
-set $bg-urgent          #CC575D
+set $border-background  #514036
+set $bg-focused         #79740E
+set $bg-focusedi        #79740E
+set $bg-unfocused       #514036
+set $bg-urgent          #AF2528
 set $bg-placeholder     #00FF00
-set $bg-background      #282f39
+set $bg-background      #514036
 set $text-focused       #FFFFFF
 set $text-focusedi      #FFFFFF
 set $text-unfocused     #FFFFFF
@@ -31,8 +31,9 @@ client.placeholder      $border-placeholder $bg-placeholder $text-placeholder #C
 client.background       $border-background  $bg-background  $text-background  #CC575D
 
 # Borders
-default_border pixel 0
-default_floating_border pixel 0
+default_border pixel 1
+default_floating_border pixel 1
+for_window [class="^.*"] border pixel 1
 floating_modifier $mod
 
 # Gaps
@@ -44,7 +45,7 @@ gaps outer 0
 focus_follows_mouse no
 
 # Execute Jobs
-exec --no-startup-id feh --bg-scale ~/Pictures/icecold.png
+exec --no-startup-id feh --bg-scale ~/Pictures/watteau.jpg
 exec --no-startup-id xfce4-panel --disable-wm-check
 exec --no-startup-id picom
 exec --no-startup-id xss-lock -- ~/.local/bin/i3lock-arc
@@ -86,7 +87,6 @@ set $ws0 "0"
 
 # For HDMI Screening
 # workspace $ws0 output HDMI2 VGA
-# exec --no-startup-id xrandr --output HDMI2 --auto --right-of eDP1
 # bindsym $mod+m exec --no-startup-id xrandr --output HDMI2 --auto --right-of eDP1
 
 # Window

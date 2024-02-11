@@ -24,6 +24,10 @@ repo = 'lervag/vimtex'
 on_ft = ['tex']
 
 [[plugins]]
+repo = 'evanleck/vim-svelte'
+on_ft = ['svelte']
+
+[[plugins]]
 repo = 'mhinz/vim-sayonara'
 on_cmd = ['Sayonara', 'Sayonara!']
 hook_add = "runtime plugins/sayonara.vim"

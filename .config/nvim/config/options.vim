@@ -7,9 +7,11 @@ execute "set background=" . $BACKGROUND
 set fillchars+=vert:│
 colorscheme 16colors
 
+set cmdheight=0
 set noshowmode
 set noruler
 set noshowcmd
+set mouse=
 
 " Indents
 set expandtab
@@ -48,7 +50,7 @@ function! s:change_statusline() abort
     exec 'setlocal statusline=' . repeat('─', winwidth(l:nr))
     " exec 'setlocal statusline=' . repeat('─', 250)
   else
-    echo 'hiden'
+    echo 'hidden'
     setlocal laststatus=0
   endif
 endfunction

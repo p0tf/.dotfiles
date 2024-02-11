@@ -1,11 +1,13 @@
 app=feh
 last_user=
-screenshot_dir=file:/home/kanta
+screenshot_dir=file:/home/kanta/Pictures/fest77
 action=1
-delay=0
+delay=3
 region=3
-show_mouse=1
+show_mouse=0
 last_extension=png
 enable_imgur_upload=true
-show_border=1
+show_border=0
+custom_action_command=none
+show_in_folder=false
 

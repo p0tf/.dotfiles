@@ -1,28 +1,28 @@
 require('gitsigns').setup {
   signs = {
-    add = {hl = 'GitGutterAdd', text = ''},
-    change = {hl = 'GitGutterChange', text = ''},
-    delete = {hl = 'GitGutterDelete', text = ''},
-    topdelete = {hl = 'GitGutterDelete', text = ''},
-    changedelete = {hl = 'GitGutterChange', text = ''},
+    add = { hl = 'GitGutterAdd', text = '' },
+    change = { hl = 'GitGutterChange', text = '󰏫' },
+    delete = { hl = 'GitGutterDelete', text = '' },
+    topdelete = { hl = 'GitGutterDelete', text = '' },
+    changedelete = { hl = 'GitGutterChange', text = '󰷨' },
   },
-  keymaps = {
-    noremap = true,
-    buffer = true,
-    ['n [g'] = {
-      expr = true,
-      "&diff ? '[g' : '<cmd>lua require\"gitsigns\".prev_hunk()<CR>'"
-    },
-    ['n ]g'] = {
-      expr = true,
-      "&diff ? ']g' : '<cmd>lua require\"gitsigns\".next_hunk()<CR>'"
-    },
-
-    ['n <leader>ga'] = '<cmd>lua require"gitsigns".stage_hunk()<CR>',
-    ['n <leader>gd'] = '<cmd>lua require"gitsigns".undo_stage_hunk()<CR>',
-    ['n <leader>gr'] = '<cmd>lua require"gitsigns".reset_hunk()<CR>',
-    ['n <leader>gR'] = '<cmd>lua require"gitsigns".reset_buffer()<CR>',
-    ['n <leader>gg'] = '<cmd>lua require"gitsigns".preview_hunk()<CR>',
-    ['n <leader>gb'] = '<cmd>lua require"gitsigns".blame_line(true)<CR>',
-  }
+  on_attach = function(bufnr)
+    local gs = package.loaded.gitsigns
+    vim.keymap.set('n', '[g', function()
+      if vim.wo.diff then return '[g' and
+            vim.schedule(function() gs.prev_hunk() end)
+      end
+    end, { expr = true })
+    vim.keymap.set('n', ']g', function()
+      if vim.wo.diff then return ']g' and
+            vim.schedule(function() gs.next_hunk() end)
+      end
+    end, { expr = true })
+    vim.keymap.set('n', '<leader>ga', gs.stage_hunk)
+    vim.keymap.set('n', '<leader>gd', gs.undo_stage_hunk)
+    vim.keymap.set('n', '<leader>gr', gs.reset_hunk)
+    vim.keymap.set('n', '<leader>gR', gs.reset_buffer)
+    vim.keymap.set('n', '<leader>gg', gs.preview_hunk)
+    vim.keymap.set('n', '<leader>gb', function() gs.blame_line { full = true } end)
+  end,
 }

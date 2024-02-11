@@ -5,6 +5,10 @@ repo = 'Shougo/dein.vim'
 repo = 'watcol/onelight.vim'
 # hook_add = "runtime plugins/onelight.vim"
 
+# [[plugins]]
+# repo = 'joshdick/onedark.vim'
+# rev = 'fix-vim-lsp'
+# 
 [[plugins]]
 repo = 'ayu-theme/ayu-vim'
 [[plugins]]
@@ -30,9 +34,13 @@ repo = 'rhysd/vim-operator-surround'
 depends = ['vim-operator-user']
 hook_add = "runtime plugins/surround.lua"
 
+# [[plugins]]
+# repo = 'hrsh7th/vim-seak'
+# hook_add = "runtime plugins/seak.vim"
+
 [[plugins]]
-repo = 'hrsh7th/vim-seak'
-hook_add = "runtime plugins/seak.vim"
+repo = 'hrsh7th/vim-searchx'
+hook_add = "runtime plugins/searchx.vim"
 
 [[plugins]]
 repo = 'mattn/vim-molder'
@@ -87,10 +95,10 @@ hook_add = "runtime plugins/gitsigns.lua"
 repo = 'Xuyuanp/scrollbar.nvim'
 hook_add = "runtime plugins/scrollbar.vim"
 
-[[plugins]]
-repo = 'phaazon/hop.nvim'
-hook_add = "runtime plugins/hop.lua"
-
+# [[plugins]]
+# repo = 'phaazon/hop.nvim'
+# hook_add = "runtime plugins/hop.lua"
+# 
 # [[plugins]]
 # repo = 'prabirshrestha/vim-lsp'
 # hook_add = "runtime plugins/lsp.vim"
@@ -107,8 +115,11 @@ hook_add = 'runtime plugins/lsp_signature.lua'
 repo = 'neovim/nvim-lspconfig'
 
 [[plugins]]
-repo = 'williamboman/nvim-lsp-installer'
-depends = ['nvim-lspconfig', 'nvim-cmp']
+repo = 'williamboman/mason.nvim'
+
+[[plugins]]
+repo = 'williamboman/mason-lspconfig.nvim'
+depends = ['nvim-lspconfig', 'mason.nvim', 'nvim-cmp']
 hook_add = "runtime plugins/nvim-lsp.lua"
 
 [[plugins]]
@@ -128,7 +139,7 @@ repo = 'vim-denops/denops.vim'
 # [[multiple_plugins]]
 # plugins = [ 'ddc.vim', 'pum.vim', 'vim-vsnip', 'vim-vsnip-integ', 'lexima.vim' ]
 # hook_add = "runtime plugins/ddc-pum.vim"
-# 
+
 # [[plugins]]
 # repo = 'Shougo/neco-vim'
 # depends = ['ddc.vim']
@@ -155,7 +166,7 @@ repo = 'vim-denops/denops.vim'
 # 
 # [[plugins]]
 # repo = 'Shougo/ddc-nvim-lsp'
-
+# 
 # [[plugins]]
 # repo = 'tani/ddc-fuzzy'
 # depends = ['ddc.vim']
@@ -177,6 +188,10 @@ hook_add = 'runtime plugins/skkeleton-indicator.lua'
 repo = 'monaqa/dps-dial.vim'
 depends = ['denops.vim']
 hook_add = 'runtime plugins/dial.vim'
+
+[[plugins]]
+repo = 'skanehira/preview-uml.vim'
+hook_add = 'runtime plugins/preview-uml.vim'
 
 [[plugins]]
 repo = 'lambdalisue/guise.vim'

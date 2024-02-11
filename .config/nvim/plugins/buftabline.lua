@@ -6,16 +6,16 @@ buftabline.setup {
   auto_hide = false,
   go_to_maps = false,
   flags = {
-    modified = " ",
-    not_modifiable = " ",
-    readonly = " ",
+    modified = "󰏫 ",
+    not_modifiable = "󰏮 ",
+    readonly = " ",
   },
   hlgroups = {
     current = "Normal",
     normal = "Tabline",
     active = "TablineSel",
     modified_current = "DiffAdd",
-    spacing= "TablineFill",
+    spacing = "TablineFill",
   }
 }
 

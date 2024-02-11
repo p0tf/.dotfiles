@@ -9,4 +9,5 @@ configuration {
   kb-mode-next: "Shift+Right,Super+l";
 }
 
-@theme "~/.config/rofi/Iceberg.rasi"
+//@theme "~/.config/rofi/Iceberg.rasi"
+@theme "/usr/share/rofi/themes/gruvbox-light-hard.rasi"

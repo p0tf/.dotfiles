@@ -51,6 +51,7 @@ export PATH="$PATH:$HOME/.gem/ruby/3.0.0/bin"
 export PATH="$PATH:$HOME/.local/bin"
 export PATH="$PATH:$HOME/.deno/bin"
 export PATH="$PATH:$HOME/go/bin"
+export PYTHONPATH="$HOME/ctf/python"
 
 # Prompts
 autoload -Uz colors

@@ -1,9 +1,9 @@
-normal_color=7829115
-focused_color=3507428
-urgent_color=16146769
-mode_color=14453469
-visible_color=10131862
-strip_workspace_numbers=true
+normal_color=9601908
+focused_color=7501342
+urgent_color=11478312
+mode_color=9588600
+visible_color=9601908
+strip_workspace_numbers=false
 auto_detect_outputs=false
 output=
 
